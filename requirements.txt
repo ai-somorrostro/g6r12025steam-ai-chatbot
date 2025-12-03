@@ -1,0 +1,21 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# Embeddings ONNX
+onnxruntime
+numpy==1.26.4
+
+# Chroma (por si quieres vector DB local)
+chromadb
+
+# Data handling
+ndjson
+requests
+tqdm
+
+# Elasticsearch
+elasticsearch
+
+# Testing
+pytest

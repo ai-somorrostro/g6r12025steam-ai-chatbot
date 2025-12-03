@@ -1,0 +1,15 @@
+# Entorno virtual
+venv/
+
+# Config
+.env
+
+# Pycache
+__pycache__/
+*.py[cod]
+
+# Archivos de logs temporales iker 
+*.log
+venv/
+.env
+__pycache__/

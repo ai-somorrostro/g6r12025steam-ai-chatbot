@@ -1,260 +1,212 @@
-# import os
-# from elasticsearch import Elasticsearch
-# from dotenv import load_dotenv
-# from api_llm.utils.tokenizer import generar_embedding
-
-# load_dotenv()
-
-# ELASTIC_URL = os.getenv("ELASTIC_URL")
-# ELASTIC_INDEX_PREFIX = os.getenv("ELASTIC_INDEX_PREFIX")
-# ELASTIC_API_KEY = os.getenv("ELASTIC_API_KEY")
-# ELASTIC_CA_CERT_PATH = os.getenv("ELASTIC_CA_CERT_PATH")
-
-# # Inicializa el cliente con API Key y certificados
-# es = Elasticsearch(
-#     ELASTIC_URL,
-#     api_key=ELASTIC_API_KEY,
-#     ca_certs=ELASTIC_CA_CERT_PATH,
-#     verify_certs=True
-# )
-
-
-# def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 5) -> str:
-#     """
-#     Realiza búsqueda semántica REAL usando kNN y embeddings.
-#     """
-#     embedding = generar_embedding(pregunta)
-
-#     query = {
-#         "size": top_k,
-#         "query": {
-#             "knn": {
-#                 "vector_embedding": {
-#                     "vector": embedding,
-#                     "k": top_k
-#                 }
-#             }
-#         }
-#     }
-
-#     # Usa índice dinámico más reciente
-#     from datetime import datetime
-#     indice_hoy = f"{ELASTIC_INDEX_PREFIX}{datetime.today().strftime('%Y.%m.%d')}"
-
-#     try:
-#         response = es.search(index=indice_hoy, body=query)
-
-#         hits = response.get("hits", {}).get("hits", [])
-
-#         contexto = "\n\n".join([
-#             f"Título: {doc['_source'].get('name', '')}\nDescripción: {doc['_source'].get('detailed_description', '')}"
-#             for doc in hits
-#         ])
-
-#         return contexto if contexto else "No se encontró contexto relevante."
-
-#     except Exception as e:
-#         return f"[Error Elasticsearch] {str(e)}"   
-
-#  Archivo API-Reto-1/api_llm/utils/elasticsearch_connector.py, para flujo normal con API-KEY y embbedings.Arriba
-
-
-# ** Este siguiente archivo hace  búsquedas desde la API aunque el nodo con API Key esté caído y Cliente de Elasticsearch con autenticación básica
-
-
-# import os
-# from elasticsearch import Elasticsearch
-# from dotenv import load_dotenv
-# import warnings
-# from urllib3.exceptions import InsecureRequestWarning
-
-# warnings.simplefilter("ignore", InsecureRequestWarning)
-
-# load_dotenv()
-
-# # ================================
-# # Configuración conexión temporal
-# # ================================
-
-# ELASTIC_URLS = os.getenv("ELASTIC_URLS", "").split(",")
-# ELASTIC_USER = os.getenv("ELASTIC_USER")
-# ELASTIC_PASSWORD = os.getenv("ELASTIC_PASSWORD")
-# ELASTIC_INDEX = os.getenv("ELASTIC_INDEX", "steam_games-*")
-
-# # Crear cliente temporal sin verificación de certificado (solo para pruebas)
-# es = Elasticsearch(
-#     hosts=ELASTIC_URLS,
-#     basic_auth=(ELASTIC_USER, ELASTIC_PASSWORD),
-#     verify_certs=False,
-#     ssl_show_warn=False,
-#     request_timeout=30,
-#     max_retries=5,
-#     retry_on_timeout=True,
-# )
-
-# def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 5) -> str:
-#     """
-#     Realiza búsqueda por texto plano (match simple) en Elasticsearch.
-#     Retorna contexto textual basado en el campo "name" o "detailed_description".
-#     """
-
-#     query = {
-#         "size": top_k,
-#         "query": {
-#             "match": {
-#                 "name": {
-#                     "query": pregunta,
-#                     "fuzziness": "AUTO"
-#                 }
-#             }
-#         },
-#         "_source": ["name", "detailed_description"]
-#     }
-
-#     try:
-#         response = es.search(index=ELASTIC_INDEX, body=query)
-#         hits = response.get("hits", {}).get("hits", [])
-
-#         if not hits:
-#             return "[INFO] No se encontró contexto para la pregunta."
-
-#         contexto = "\n\n".join([
-#             f"🎮 Título: {doc['_source'].get('name', '')}\n📝 Descripción: {doc['_source'].get('detailed_description', '')}"
-#             for doc in hits
-#         ])
-
-#         return contexto
-
-#     except Exception as e:
-#         return f"[ERROR al consultar Elasticsearch]: {str(e)}"
-
-# # =============================================
-# # Código anterior con embeddings (comentado)
-# # =============================================
-
-# # from api_llm.utils.tokenizer import generar_embedding
-# # ELASTIC_URL = os.getenv("ELASTIC_URL")
-# # ELASTIC_INDEX = os.getenv("ELASTIC_INDEX")
-# # ELASTIC_API_KEY = os.getenv("ELASTIC_API_KEY")
-# # ELASTIC_CA_CERT_PATH = os.getenv("ELASTIC_CA_CERT_PATH")
-
-# # es = Elasticsearch(
-# #     ELASTIC_URL,
-# #     api_key=ELASTIC_API_KEY,
-# #     ca_certs=ELASTIC_CA_CERT_PATH
-# # )
-
-# # def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 5) -> str:
-# #     embedding = generar_embedding(pregunta)
-# #     query = {
-# #         "size": top_k,
-# #         "query": {
-# #             "knn": {
-# #                 "vector_embedding": {
-# #                     "vector": embedding,
-# #                     "k": top_k
-# #                 }
-# #             }
-# #         }
-# #     }
-# #     ...
-
-
-
-
 import os
+import logging
+import re  # <--- IMPORTANTE: Necesario para detectar números
+from typing import Tuple
 from elasticsearch import Elasticsearch
 from dotenv import load_dotenv
-import warnings
-from urllib3.exceptions import InsecureRequestWarning
-
-warnings.simplefilter("ignore", InsecureRequestWarning)
+from api_llm.utils.tokenizer import generar_embedding
 
 load_dotenv()
+logger = logging.getLogger(__name__)
 
 # ================================
-# Configuración conexión temporal
+# Configuración conexión segura con API KEY
 # ================================
 
 ELASTIC_URLS = os.getenv("ELASTIC_URLS", "").split(",")
-ELASTIC_USER = os.getenv("ELASTIC_USER")
-ELASTIC_PASSWORD = os.getenv("ELASTIC_PASSWORD")
-ELASTIC_INDEX = os.getenv("ELASTIC_INDEX", "steam_games-*")
+ELASTIC_INDEX_PREFIX = os.getenv("ELASTIC_INDEX_PREFIX", "steam_games-*")
 
-# Crear cliente temporal sin verificación de certificado (solo para pruebas)
+# Obtener la API Key del .env
+ENV_API_KEY = os.getenv("ELASTIC_API_KEY")
+api_key_tuple = None
+
+if ENV_API_KEY and ":" in ENV_API_KEY:
+    api_key_tuple = tuple(ENV_API_KEY.split(":"))
+else:
+    print("⚠️ ADVERTENCIA: No se encontró ELASTIC_API_KEY válida en el .env")
+
 es = Elasticsearch(
     hosts=ELASTIC_URLS,
-    basic_auth=(ELASTIC_USER, ELASTIC_PASSWORD),
-    verify_certs=False,
+    api_key=api_key_tuple,
+    verify_certs=False, 
     ssl_show_warn=False,
     request_timeout=30,
     max_retries=5,
     retry_on_timeout=True,
 )
 
-def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 5) -> str:
+# ================================
+# Función para seleccionar el índice más nuevo
+# ================================
+def obtener_ultimo_indice(prefix_pattern: str) -> str:
     """
-    Realiza búsqueda por texto plano (match simple) en Elasticsearch.
-    Retorna contexto textual basado en el campo "name" o "detailed_description".
+    Obtiene la lista de índices que coinciden con el patrón (ej: steam_games-*)
+    y devuelve el último alfabéticamente (que corresponde a la fecha más reciente).
     """
+    try:
+        indices = list(es.indices.get(index=prefix_pattern).keys())
+        
+        if not indices:
+            return prefix_pattern
 
-    query = {
-        "size": top_k,
-        "query": {
-            "match": {
-                "name": {
-                    "query": pregunta,
-                    "fuzziness": "AUTO"
+        indices_ordenados = sorted(indices)
+        ultimo_indice = indices_ordenados[-1]
+        
+        return ultimo_indice
+
+    except Exception as e:
+        logger.error(f"Error buscando último índice: {e}")
+        return prefix_pattern
+
+# ================================
+# Función principal de búsqueda
+# ================================
+def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 10) -> Tuple[str, float]:
+    """
+    Realiza búsqueda HÍBRIDA en el índice MÁS RECIENTE.
+    Si detecta un precio, filtra numéricamente. Si no, usa búsqueda híbrida estándar.
+    Devuelve: (Contexto formateado, Score de relevancia máximo)
+    """
+    try:
+        embedding = generar_embedding(pregunta)
+        
+        # Cálculo dinámico de candidatos
+        candidates = max(50, top_k + 50)
+        
+        # Campos que queremos recuperar
+        source_fields = [
+            "name", "short_description", "detailed_description", 
+            "genres", "price_category", "is_free", 
+            "developers", "price_final", "metacritic_score"
+        ]
+
+        # 1. DETECCIÓN DE PRECIO (Regex)
+        # Busca números como: 9.75, 9,75, 10, 4.5
+        match_precio = re.search(r'(\d+[.,]\d{1,2}|\d+)', pregunta)
+        
+        query = {}
+
+        # === ESTRATEGIA A: FILTRO DE PRECIO EXACTO ===
+        # Se activa solo si encontramos un número en la pregunta y la palabra "precio", "cuesta" o "vale" (opcional, pero recomendado para no confundir con "Dead Rising 4")
+        if match_precio and any(x in pregunta.lower() for x in ['precio', 'cuesta', 'vale', 'euros', 'eur', '$']):
+            try:
+                # Normalizar precio (cambiar coma por punto)
+                precio_str = match_precio.group(1).replace(',', '.')
+                precio_target = float(precio_str)
+                logger.info(f"Filtro numérico activado: Buscando precio cercano a {precio_target}")
+
+                query = {
+                    "size": top_k,
+                    "_source": source_fields,
+                    "query": {
+                        "bool": {
+                            "must": [
+                                # Usamos range para tolerar pequeñas diferencias de decimales
+                                {
+                                    "range": {
+                                        "price_final": {
+                                            "gte": precio_target - 0.05, 
+                                            "lte": precio_target + 0.05
+                                        }
+                                    }
+                                }
+                            ],
+                            # Añadimos el kNN como 'should' para ordenar los resultados que coinciden en precio
+                            # por similitud semántica con el resto de la frase
+                            "should": [
+                                {
+                                    "knn": {
+                                        "field": "vector_embedding",
+                                        "query_vector": embedding,
+                                        "k": top_k,
+                                        "num_candidates": candidates
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            except ValueError:
+                # Si falla la conversión a float, seguimos con la estrategia normal
+                pass
+
+        # === ESTRATEGIA B: BÚSQUEDA HÍBRIDA ESTÁNDAR (Si no es búsqueda de precio) ===
+        if not query:
+            query = {
+                "size": top_k, 
+                "_source": source_fields,
+                
+                # Búsqueda Vectorial (Conceptos)
+                "knn": {
+                    "field": "vector_embedding", 
+                    "query_vector": embedding,
+                    "k": top_k,
+                    "num_candidates": candidates,
+                    "boost": 0.5 
+                },
+
+                # Búsqueda Texto Exacto (Palabras clave)
+                "query": {
+                    "bool": {
+                        "should": [
+                            {
+                                "multi_match": {
+                                    "query": pregunta,
+                                    "fields": [
+                                        "name^3",
+                                        "price_category^5",
+                                        "genres^2",
+                                        "categories",
+                                        "short_description",
+                                        "detailed_description"
+                                    ],
+                                    "type": "best_fields",
+                                    "fuzziness": "AUTO"
+                                }
+                            }
+                        ]
+                    }
                 }
             }
-        },
-        "_source": ["name", "detailed_description"]
-    }
 
-    try:
-        response = es.search(index=ELASTIC_INDEX, body=query)
+        # Seleccionamos el índice más reciente
+        indice_objetivo = obtener_ultimo_indice(ELASTIC_INDEX_PREFIX)
+        
+        # Ejecutamos la búsqueda
+        response = es.search(index=indice_objetivo, body=query)
         hits = response.get("hits", {}).get("hits", [])
 
         if not hits:
-            return "[INFO] No se encontró contexto para la pregunta."
+            return "[INFO] No se encontró contexto relevante.", 0.0
 
-        contexto = "\n\n".join([
-            f"🎮 Título: {doc['_source'].get('name', '')}\n📝 Descripción: {doc['_source'].get('detailed_description', '')}"
-            for doc in hits
-        ])
+        # === CAPTURAR MAX SCORE ===
+        max_score = hits[0].get("_score", 0.0)
 
-        return contexto
+        contexto_list = []
+
+        for doc in hits:
+            source = doc['_source']
+            nombre = source.get('name', 'Desconocido')
+            
+            # Formateo del precio para el texto
+            if source.get('is_free') or source.get('price_category') == "Gratis":
+                precio_texto = "GRATIS"
+            else:
+                precio_val = source.get('price_final', 'N/A')
+                precio_texto = f"{precio_val} EUR"
+            
+            info = (
+                f"🎮 Título: {nombre}\n"
+                f"💰 Precio: {precio_texto}\n"
+                f"🏷️ Géneros: {', '.join(source.get('genres', []))}\n"
+                f"📝 Descripción: {source.get('short_description', '')[:300]}..."
+            )
+            contexto_list.append(info)
+
+        texto_final = "\n\n---\n\n".join(contexto_list)
+        
+        return texto_final, max_score
 
     except Exception as e:
-        return f"[ERROR al consultar Elasticsearch]: {str(e)}"
-
-# =============================================
-# Código anterior con embeddings (comentado)
-# =============================================
-
-# from api_llm.utils.tokenizer import generar_embedding
-# ELASTIC_URL = os.getenv("ELASTIC_URL")
-# ELASTIC_INDEX = os.getenv("ELASTIC_INDEX")
-# ELASTIC_API_KEY = os.getenv("ELASTIC_API_KEY")
-# ELASTIC_CA_CERT_PATH = os.getenv("ELASTIC_CA_CERT_PATH")
-
-# es = Elasticsearch(
-#     ELASTIC_URL,
-#     api_key=ELASTIC_API_KEY,
-#     ca_certs=ELASTIC_CA_CERT_PATH
-# )
-
-# def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 5) -> str:
-#     embedding = generar_embedding(pregunta)
-#     query = {
-#         "size": top_k,
-#         "query": {
-#             "knn": {
-#                 "vector_embedding": {
-#                     "vector": embedding,
-#                     "k": top_k
-#                 }
-#             }
-#         }
-#     }
-#     ...
+        print(f"[ERROR DETALLADO]: {e}")
+        return f"[ERROR Elasticsearch]: {str(e)}", 0.0

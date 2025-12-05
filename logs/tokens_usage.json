@@ -504,5 +504,155 @@
     "elastic_score": 29.70832,
     "pregunta": "Dame un resumen del videojuego The Witcher 3",
     "respuesta": "\u00a1Claro! Aqu\u00ed tienes un resumen de **The Witcher 3: Wild Hunt**:\n\n*   **The Witcher 3: Wild Hunt** (2.99 EUR) - Eres Geralt de Rivia, un cazador de monstruos en un mundo de fantas\u00eda oscura. Tu misi\u00f3n principal es encontrar a Ciri, una joven con poderes especiales. \u00a1Prep\u00e1rate para un RPG \u00e9pico lleno de combates, decisiones importantes y un mundo abierto enorme para explorar!\n"
+  },
+  {
+    "timestamp": "2025-12-04T19:08:41.087159",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 438,
+    "tokens_salida": 58,
+    "tokens_totales": 496,
+    "elastic_score": 0.0,
+    "pregunta": "Dame los juegos gratis que tengas",
+    "respuesta": "\u00a1Claro que s\u00ed! Bas\u00e1ndome en los juegos que tengo disponibles, no puedo darte una lista de juegos gratuitos. Parece que no tengo esa informaci\u00f3n en este momento. \u00a1Pero no te preocupes, si necesitas recomendaciones de otros tipos de juegos, h\u00e1zmelo saber!\n"
+  },
+  {
+    "timestamp": "2025-12-05T07:25:55.151642",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1290,
+    "tokens_salida": 18,
+    "tokens_totales": 1308,
+    "elastic_score": 20.219372,
+    "pregunta": "Dime que juegos tenemos gratis",
+    "respuesta": "\u00a1Hola! En la lista que tengo, no hay juegos que sean gratuitos. \n"
+  },
+  {
+    "timestamp": "2025-12-05T07:30:16.136456",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1290,
+    "tokens_salida": 21,
+    "tokens_totales": 1311,
+    "elastic_score": 20.219372,
+    "pregunta": "Dime que juegos tenemos gratis",
+    "respuesta": "\u00a1Hola! No tengo juegos gratuitos en esta lista, pero todos los dem\u00e1s tienen muy buena pinta.\n"
+  },
+  {
+    "timestamp": "2025-12-05T07:39:27.463361",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1290,
+    "tokens_salida": 19,
+    "tokens_totales": 1309,
+    "elastic_score": 20.219372,
+    "pregunta": "Dime que juegos tenemos gratis",
+    "respuesta": "\u00a1Hola! En este listado, no hay juegos gratuitos. Todos tienen un precio.\n"
+  },
+  {
+    "timestamp": "2025-12-05T07:39:44.629564",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1267,
+    "tokens_salida": 12,
+    "tokens_totales": 1279,
+    "elastic_score": 18.94561,
+    "pregunta": "Dime 4 juegos gratis",
+    "respuesta": "Lo siento, no tengo juegos gratis en esta lista.\n"
+  },
+  {
+    "timestamp": "2025-12-05T07:39:48.335851",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1267,
+    "tokens_salida": 40,
+    "tokens_totales": 1307,
+    "elastic_score": 18.94561,
+    "pregunta": "Dime 4 juegos gratis",
+    "respuesta": "\u00a1Hola! Entiendo que buscas juegos gratis, pero en la lista que tengo, todos los juegos son de pago. No puedo ofrecerte opciones gratuitas con esta informaci\u00f3n. \u00a1Lo siento!\n"
+  },
+  {
+    "timestamp": "2025-12-05T08:17:57.384132",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1412,
+    "tokens_salida": 89,
+    "tokens_totales": 1501,
+    "elastic_score": 61.206573,
+    "pregunta": "Juegos de puzles que la mecanica principal sea la manipulaci\u00f3n de portales",
+    "respuesta": "\u00a1Hola! Aunque no tengo un juego que se centre *exactamente* en la manipulaci\u00f3n de portales, tengo una opci\u00f3n que te podr\u00eda gustar:\n\n*   **Sky: Ni\u00f1os de la Luz** (GRATIS) - Este juego es un MMO de aventuras con puzles. Aunque no se centra en portales, tiene elementos de puzles y exploraci\u00f3n en un mundo hermoso que seguro te encantar\u00e1.\n"
+  },
+  {
+    "timestamp": "2025-12-05T08:20:28.420413",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1422,
+    "tokens_salida": 102,
+    "tokens_totales": 1524,
+    "elastic_score": 61.206573,
+    "pregunta": "Juegos de puzles que la mecanica principal sea la manipulaci\u00f3n de portales para resolver complejos d",
+    "respuesta": "\u00a1No tengo un juego que se centre *exactamente* en la manipulaci\u00f3n de portales! Pero, bas\u00e1ndome en los juegos disponibles, te recomendar\u00eda **Sky: Ni\u00f1os de la Luz** (GRATIS).\n\nAunque no se centra en portales, es un juego de puzles y aventuras. Podr\u00edas encontrar desaf\u00edos que requieran ingenio y exploraci\u00f3n del entorno, que es lo m\u00e1s parecido que tengo. \u00a1Es gratis, as\u00ed que puedes probarlo sin problemas!\n"
+  },
+  {
+    "timestamp": "2025-12-05T08:28:47.068601",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1263,
+    "tokens_salida": 136,
+    "tokens_totales": 1399,
+    "elastic_score": 26.600471,
+    "pregunta": " dame un juego similar a Wolfenstein",
+    "respuesta": "\u00a1Claro! Si te gust\u00f3 Wolfenstein, te recomiendo echarle un ojo a estos:\n\n*   **Wolfenstein: Youngblood** (19.99 EUR) - Es una aventura cooperativa moderna de Wolfenstein, \u00a1as\u00ed que la acci\u00f3n est\u00e1 asegurada!\n*   **Wolfenstein: The Old Blood** (19.99 EUR) - Es una precuela, con la misma acci\u00f3n y ambientaci\u00f3n que seguro te encantar\u00e1.\n*   **Wolfenstein: The New Order** (19.99 EUR) - Revitaliza la serie, \u00a1as\u00ed que es otra buena opci\u00f3n si te gust\u00f3 el primero!"
+  },
+  {
+    "timestamp": "2025-12-05T08:29:47.711567",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1333,
+    "tokens_salida": 61,
+    "tokens_totales": 1394,
+    "elastic_score": 38.371704,
+    "pregunta": " dame un juego similar a Wolfenstein (que no sea de la saga)",
+    "respuesta": "\u00a1Claro! Bas\u00e1ndome en los juegos que tengo, te puedo recomendar:\n\n*   **Wolfenstein: Youngblood** (19.99 EUR) - Aunque es de la saga, es un juego de acci\u00f3n donde luchas contra nazis, similar a lo que buscas.\n"
+  },
+  {
+    "timestamp": "2025-12-05T08:31:10.301058",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1314,
+    "tokens_salida": 72,
+    "tokens_totales": 1386,
+    "elastic_score": 45.687412,
+    "pregunta": " dame un juego similar a Black Desert",
+    "respuesta": "\u00a1Claro que s\u00ed! Si te gust\u00f3 **Black Desert**, te recomiendo echarle un ojo a:\n\n*   **Crimson Desert** (69.99 EUR) -  Aunque no es un MMORPG, es un RPG de acci\u00f3n con mundo abierto, as\u00ed que comparte la exploraci\u00f3n y la acci\u00f3n que te gustan de Black Desert.\n"
+  },
+  {
+    "timestamp": "2025-12-05T08:33:30.324109",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1253,
+    "tokens_salida": 95,
+    "tokens_totales": 1348,
+    "elastic_score": 35.31524,
+    "pregunta": " dame un juego similar a R.E.P.O",
+    "respuesta": "\u00a1Claro! Si te gust\u00f3 **R.E.P.O**, te recomiendo echarle un ojo a:\n\n*   **A Date with Death** (GRATIS) / **A Date with Death - Expansion DLC** (6.89 EUR) - Aunque no es exactamente igual, comparte el elemento de \"encontrar\" algo (en este caso, el amor/la muerte) y es un juego de simulaci\u00f3n con una atm\u00f3sfera peculiar.\n"
+  },
+  {
+    "timestamp": "2025-12-05T08:34:24.370916",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1169,
+    "tokens_salida": 24,
+    "tokens_totales": 1193,
+    "elastic_score": 43.083496,
+    "pregunta": "dame juegos de sigilo en tercera persona que sean de konami",
+    "respuesta": "\u00a1Hola! No tengo juegos de sigilo en tercera persona de Konami en esta lista. Lo siento mucho.\n"
+  },
+  {
+    "timestamp": "2025-12-05T08:34:55.798262",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1160,
+    "tokens_salida": 94,
+    "tokens_totales": 1254,
+    "elastic_score": 34.72385,
+    "pregunta": "dame juegos de sigilo en tercera persona",
+    "respuesta": "\u00a1No tengo juegos de sigilo en tercera persona exactamente, pero te puedo recomendar algo que creo que te gustar\u00e1!\n\n*   **Misi\u00f3n en la Mazmorra Futanari de la Maga Kanade** (24.5 EUR) - Aunque no es de sigilo puro, este juego de rol de acci\u00f3n te pone en una mazmorra con desaf\u00edos y elementos de combate que podr\u00edan encantar si te gusta la acci\u00f3n y el rol.\n"
+  },
+  {
+    "timestamp": "2025-12-05T08:38:14.377679",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 2450,
+    "tokens_salida": 17,
+    "tokens_totales": 2467,
+    "elastic_score": 20.219372,
+    "pregunta": "Dame los juegos gratis que tengas",
+    "respuesta": "\u00a1No tengo juegos gratis en esta lista! Todos los juegos tienen un precio.\n"
   }
 ]

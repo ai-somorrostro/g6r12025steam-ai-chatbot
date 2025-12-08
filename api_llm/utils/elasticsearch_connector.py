@@ -63,9 +63,9 @@ def obtener_ultimo_indice(prefix_pattern: str) -> str:
 # ================================
 def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 10) -> Tuple[str, float]:
     """
-    Realiza búsqueda HÍBRIDA en el índice MÁS RECIENTE.
-    Si detecta un precio, filtra numéricamente. Si no, usa búsqueda híbrida estándar.
-    Devuelve: (Contexto formateado, Score de relevancia máximo)
+    Realiza búsqueda VECTORIAL PURA (texto comentado).
+    Si detecta un precio, filtra numéricamente.
+    Devuelve: (Contexto formateado, Score de relevancia 0.0 - 1.0)
     """
     try:
         embedding = generar_embedding(pregunta)
@@ -86,87 +86,73 @@ def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 10) -> Tuple[st
         
         query = {}
 
-        # === ESTRATEGIA A: FILTRO DE PRECIO EXACTO ===
-        # Se activa solo si encontramos un número en la pregunta y la palabra "precio", "cuesta" o "vale" (opcional, pero recomendado para no confundir con "Dead Rising 4")
+        # === ESTRATEGIA A: FILTRO DE PRECIO EXACTO (CORREGIDO) ===
         if match_precio and any(x in pregunta.lower() for x in ['precio', 'cuesta', 'vale', 'euros', 'eur', '$']):
             try:
-                # Normalizar precio (cambiar coma por punto)
                 precio_str = match_precio.group(1).replace(',', '.')
                 precio_target = float(precio_str)
                 logger.info(f"Filtro numérico activado: Buscando precio cercano a {precio_target}")
 
+                # CORRECCIÓN: Usamos la estructura nativa 'knn' con 'filter'
+                # Esto filtra los documentos PERO el score devuelto es puramente vectorial.
                 query = {
                     "size": top_k,
                     "_source": source_fields,
-                    "query": {
-                        "bool": {
-                            "must": [
-                                # Usamos range para tolerar pequeñas diferencias de decimales
-                                {
-                                    "range": {
-                                        "price_final": {
-                                            "gte": precio_target - 0.05, 
-                                            "lte": precio_target + 0.05
-                                        }
-                                    }
+                    "knn": {
+                        "field": "vector_embedding",
+                        "query_vector": embedding,
+                        "k": top_k,
+                        "num_candidates": candidates,
+                        "filter": {
+                            "range": {
+                                "price_final": {
+                                    "gte": precio_target - 0.05, 
+                                    "lte": precio_target + 0.05
                                 }
-                            ],
-                            # Añadimos el kNN como 'should' para ordenar los resultados que coinciden en precio
-                            # por similitud semántica con el resto de la frase
-                            "should": [
-                                {
-                                    "knn": {
-                                        "field": "vector_embedding",
-                                        "query_vector": embedding,
-                                        "k": top_k,
-                                        "num_candidates": candidates
-                                    }
-                                }
-                            ]
+                            }
                         }
                     }
                 }
             except ValueError:
-                # Si falla la conversión a float, seguimos con la estrategia normal
                 pass
 
-        # === ESTRATEGIA B: BÚSQUEDA HÍBRIDA ESTÁNDAR (Si no es búsqueda de precio) ===
+        # === ESTRATEGIA B: BÚSQUEDA VECTORIAL (TEXTO COMENTADO) ===
         if not query:
             query = {
                 "size": top_k, 
                 "_source": source_fields,
                 
-                # Búsqueda Vectorial (Conceptos)
+                # Búsqueda Vectorial (Conceptos) - AHORA ES LA ÚNICA ACTIVA
                 "knn": {
                     "field": "vector_embedding", 
                     "query_vector": embedding,
                     "k": top_k,
                     "num_candidates": candidates,
-                    "boost": 0.5 
+                    # "boost": 0.5 # <--- COMENTADO: Quitamos el boost para tener el score real (0 a 1)
                 },
 
-                # Búsqueda Texto Exacto (Palabras clave)
-                "query": {
-                    "bool": {
-                        "should": [
-                            {
-                                "multi_match": {
-                                    "query": pregunta,
-                                    "fields": [
-                                        "name^3",
-                                        "price_category^5",
-                                        "genres^2",
-                                        "categories",
-                                        "short_description",
-                                        "detailed_description"
-                                    ],
-                                    "type": "best_fields",
-                                    "fuzziness": "AUTO"
-                                }
-                            }
-                        ]
-                    }
-                }
+                # Búsqueda Texto Exacto (Palabras clave) - COMENTADO (NO SE EJECUTA)
+                # "query": {
+                #     "bool": {
+                #         "should": [
+                #             {
+                #                 "multi_match": {
+                #                     "query": pregunta,
+                #                     "fields": [
+                #                         "name^3",
+                #                         "price_category^5",
+                #                         "genres^2",
+                #                         "categories",
+                #                         "short_description",
+                #                         "detailed_description"
+                #                     ],
+                #                     "type": "best_fields",
+                #                     "fuzziness": "AUTO"
+                #                 }
+                #             }
+                #         ]
+                #     }
+                # }
             }
 
         # Seleccionamos el índice más reciente
@@ -180,6 +166,7 @@ def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 10) -> Tuple[st
             return "[INFO] No se encontró contexto relevante.", 0.0
 
         # === CAPTURAR MAX SCORE ===
+        # Al estar comentado el texto y el boost, este score será aprox entre 0.0 y 1.0
         max_score = hits[0].get("_score", 0.0)
 
         contexto_list = []
@@ -210,3 +197,4 @@ def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 10) -> Tuple[st
     except Exception as e:
         print(f"[ERROR DETALLADO]: {e}")
         return f"[ERROR Elasticsearch]: {str(e)}", 0.0
+    

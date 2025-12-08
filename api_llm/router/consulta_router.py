@@ -1,34 +1,4 @@
-# from fastapi import APIRouter
-# from api_llm.models.consulta_request import ConsultaRequest
-# from api_llm.llm_manager import obtener_respuesta_llm
-# from api_llm.utils.elasticsearch_connector import buscar_contexto_en_elasticsearch
-
-# router = APIRouter()
-
-# @router.post("/consulta")
-# async def consultar_llm(data: ConsultaRequest):
-#     """
-#     Endpoint principal: búsqueda semántica con embeddings y respuesta LLM.
-#     """
-#     pregunta = data.pregunta
-
-#     # 1. Buscar contexto por similitud semántica en Elasticsearch
-#     # CORRECCIÓN: Ahora recibimos dos valores (Texto y Score)
-#     contexto, score = buscar_contexto_en_elasticsearch(pregunta)
-
-#     # 2. Generar respuesta con modelo LLM
-#     # CORRECCIÓN: Pasamos el texto como contexto y el score por separado
-#     respuesta = obtener_respuesta_llm(pregunta, contexto, elastic_score=score)
-
-#     return {
-#         "pregunta": pregunta,
-#         "score_relevancia": score, # Agregamos esto para que lo veas en la respuesta JSON
-#         "contexto_usado": contexto,
-#         "respuesta": respuesta
-#     }
-
-
-
+# Codigo para dejar solo lo necesario del modelo 
 
 from fastapi import APIRouter, Query
 from api_llm.models.consulta_request import ConsultaRequest
@@ -46,7 +16,7 @@ router = APIRouter()
 async def consultar_llm(data: ConsultaRequest):
     """
     🔍 Endpoint principal: realiza una búsqueda semántica en Elasticsearch usando embeddings
-    y genera una respuesta final usando un LLM (OpenRouter o local).
+    y genera una respuesta final usando un LLM (OpenRouter).
     """
     pregunta = data.pregunta
 
@@ -57,12 +27,12 @@ async def consultar_llm(data: ConsultaRequest):
     respuesta = obtener_respuesta_llm(pregunta, contexto, elastic_score=score)
 
     return {
-        "pregunta": pregunta,
-        "score_relevancia": score,
-        "contexto_usado": contexto,
-        "respuesta": respuesta
+        "pregunta_realizada": pregunta,
+        "score_similitud_elasticsearch": score,
+        "modelo_llm_respuesta": {
+            "formato_texto_completo": respuesta
+        }
     }
-
 
 
 # ==========================================================
@@ -99,7 +69,6 @@ async def juegos_gratis():
     ]
 
     return {"total": len(juegos), "juegos_gratis": juegos}
-
 
 
 # ==========================================================
@@ -139,7 +108,6 @@ async def juegos_parecidos_a(titulo: str = Query(..., description="Nombre del ju
     return {"titulo_consulta": titulo, "juegos_similares": juegos}
 
 
-
 # ==========================================================
 #  ENDPOINT 3: /juegos/por-fecha
 # ==========================================================
@@ -151,7 +119,6 @@ async def juegos_por_fecha(
     """
     📅 Devuelve juegos publicados en una fecha concreta (YYYY-MM-DD) o año (YYYY).
     """
-
     if len(fecha) == 4:
         # Filtrar por AÑO completo
         query = {
@@ -191,14 +158,13 @@ async def juegos_por_fecha(
     return {"fecha_consultada": fecha, "total": len(juegos), "juegos": juegos}
 
 
-
 # ==========================================================
 #  ENDPOINT 4: /juegos/por-genero
 # ==========================================================
 
 @router.get("/juegos/por-genero")
 async def juegos_por_genero(
-    genero: str = Query(..., description="Género de juegos a buscar (Acción, Disparos, RPG, Terror...)")
+    genero: str = Query(..., description="Género de juegos a buscar (Acción, Disparos, RPG, Aventura...)")
 ):
     """
     🎮 Devuelve juegos que contienen el género solicitado. 

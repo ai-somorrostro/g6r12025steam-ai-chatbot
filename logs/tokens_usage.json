@@ -654,5 +654,865 @@
     "elastic_score": 20.219372,
     "pregunta": "Dame los juegos gratis que tengas",
     "respuesta": "\u00a1No tengo juegos gratis en esta lista! Todos los juegos tienen un precio.\n"
+  },
+  {
+    "timestamp": "2025-12-05T09:32:55.429195",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1282,
+    "tokens_salida": 14,
+    "tokens_totales": 1296,
+    "elastic_score": 20.219372,
+    "pregunta": "Dame los juegos gratis que tengas",
+    "respuesta": "\u00a1Hola! No tengo juegos que sean gratis en mi lista.\n"
+  },
+  {
+    "timestamp": "2025-12-05T09:33:11.182226",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1265,
+    "tokens_salida": 48,
+    "tokens_totales": 1313,
+    "elastic_score": 20.219372,
+    "pregunta": "Dame todos los juegos gratis que tengas",
+    "respuesta": "\u00a1Claro! Aqu\u00ed tienes el juego gratis que tengo:\n\n*   **LoveCraft** (GRATIS) - Es un juego casual y multijugador masivo que te permite crear tu propio mundo y vivir aventuras.\n"
+  },
+  {
+    "timestamp": "2025-12-05T09:34:08.796689",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1250,
+    "tokens_salida": 138,
+    "tokens_totales": 1388,
+    "elastic_score": 42.3239,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Claro que s\u00ed! Aqu\u00ed tienes los juegos que se parecen a **ONE PIECE**:\n\n*   **ONE PIECE ODYSSEY** (39.99 EUR) - Es un RPG ambientado en el mundo de ONE PIECE, \u00a1perfecto para fans!\n*   **ONE PIECE Bounty Rush** (GRATIS) - Un juego de acci\u00f3n multijugador 4v4, \u00a1con la tem\u00e1tica de ONE PIECE!\n*   **ONE PIECE: PIRATE WARRIORS 4** (39.99 EUR) - Otro juego de acci\u00f3n, \u00a1inspirado en el mundo de ONE PIECE!\n"
+  },
+  {
+    "timestamp": "2025-12-05T09:34:46.958919",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 442,
+    "tokens_salida": 53,
+    "tokens_totales": 495,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Ey, qu\u00e9 buena onda que te guste One Piece! Aunque no tengo informaci\u00f3n sobre juegos espec\u00edficos, te recomiendo que busques juegos de aventura, acci\u00f3n y RPG. \u00a1Seguro encuentras algo que te vuele la cabeza! \u00a1A darle ca\u00f1a!\n"
+  },
+  {
+    "timestamp": "2025-12-05T09:39:15.438083",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1250,
+    "tokens_salida": 149,
+    "tokens_totales": 1399,
+    "elastic_score": 42.3239,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Claro! Bas\u00e1ndome en los juegos que tengo, te recomiendo los siguientes que tienen que ver con One Piece:\n\n*   **ONE PIECE ODYSSEY** (39.99 EUR) - Es un RPG ambientado en el mundo de One Piece, \u00a1as\u00ed que es perfecto si te gusta la serie!\n*   **ONE PIECE Bounty Rush** (GRATIS) - Un juego de acci\u00f3n multijugador 4v4, \u00a1ideal para jugar con amigos!\n*   **ONE PIECE: PIRATE WARRIORS 4** (39.99 EUR) - Otro juego de acci\u00f3n, \u00a1pero este te mete de lleno en el mundo de One Piece!"
+  },
+  {
+    "timestamp": "2025-12-05T10:13:22.405814",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 443,
+    "tokens_salida": 69,
+    "tokens_totales": 512,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Entendido! Aunque no tengo informaci\u00f3n directa sobre juegos, puedo ayudarte a encontrar algo similar bas\u00e1ndome en lo que s\u00e9 que te gusta de One Piece. Dado que es un anime de piratas con mucha acci\u00f3n y aventura, te recomiendo echarle un ojo a:\n\nNo puedo hacer ninguna recomendaci\u00f3n porque no tengo informaci\u00f3n sobre juegos.\n"
+  },
+  {
+    "timestamp": "2025-12-05T10:15:12.827214",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 403,
+    "tokens_salida": 44,
+    "tokens_totales": 447,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Claro que s\u00ed! Aunque no tengo juegos de One Piece directamente, puedo recomendarte algunos que tienen elementos similares de aventura, acci\u00f3n y personajes carism\u00e1ticos:\n\n*   No tengo resultados para tu b\u00fasqueda.\n"
+  },
+  {
+    "timestamp": "2025-12-05T10:16:32.638596",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 403,
+    "tokens_salida": 93,
+    "tokens_totales": 496,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Claro, amigo! Aunque no tengo juegos de One Piece como tal, puedo recomendarte algunos que tienen un estilo similar de aventura y acci\u00f3n:\n\n*   **Sea of Thieves** (Precio no disponible) - Este juego es una aventura de piratas en mundo abierto, donde podr\u00e1s navegar, luchar y buscar tesoros con amigos. \u00a1Muy parecido al esp\u00edritu aventurero de One Piece!\n\n\u00a1Espero que te diviertas con estas recomendaciones!\n"
+  },
+  {
+    "timestamp": "2025-12-05T10:18:32.822501",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 403,
+    "tokens_salida": 34,
+    "tokens_totales": 437,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1A ver, que te ayudo con eso! Como no tengo informaci\u00f3n sobre juegos espec\u00edficos, no puedo recomendarte nada parecido a One Piece. \u00a1Lo siento!\n"
+  },
+  {
+    "timestamp": "2025-12-05T10:21:59.733778",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1250,
+    "tokens_salida": 123,
+    "tokens_totales": 1373,
+    "elastic_score": 42.3239,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Claro que s\u00ed! Aqu\u00ed tienes los juegos que se parecen a **One Piece**:\n\n*   **ONE PIECE ODYSSEY** (39.99 EUR) - \u00a1Es un RPG basado en el mundo de ONE PIECE!\n*   **ONE PIECE Bounty Rush** (GRATIS) - Un juego de acci\u00f3n multijugador 4v4 con la tem\u00e1tica de ONE PIECE.\n*   **ONE PIECE: PIRATE WARRIORS 4** (39.99 EUR) - \u00a1Otro juego de acci\u00f3n de ONE PIECE!\n"
+  },
+  {
+    "timestamp": "2025-12-05T10:24:31.955488",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1250,
+    "tokens_salida": 138,
+    "tokens_totales": 1388,
+    "elastic_score": 42.3239,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Claro que s\u00ed! Aqu\u00ed tienes los juegos que se parecen a One Piece:\n\n*   **ONE PIECE ODYSSEY** (39.99 EUR) - Es un RPG ambientado en el mundo de One Piece, \u00a1as\u00ed que es perfecto!\n*   **ONE PIECE Bounty Rush** (GRATIS) - Un juego de acci\u00f3n multijugador 4v4, \u00a1con la tem\u00e1tica de One Piece!\n*   **ONE PIECE: PIRATE WARRIORS 4** (39.99 EUR) - Otro juego de acci\u00f3n, \u00a1esta vez con un enfoque en la acci\u00f3n al estilo Pirate Warriors!\n"
+  },
+  {
+    "timestamp": "2025-12-05T10:27:31.337306",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1250,
+    "tokens_salida": 128,
+    "tokens_totales": 1378,
+    "elastic_score": 42.3239,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Claro! Bas\u00e1ndome en los juegos que tengo disponibles, aqu\u00ed tienes los que se parecen a One Piece:\n\n*   **ONE PIECE ODYSSEY** (39.99 EUR) - \u00a1Es un RPG ambientado en el mundo de One Piece!\n*   **ONE PIECE Bounty Rush** (GRATIS) - Un juego de acci\u00f3n multijugador 4 vs 4, \u00a1con la tem\u00e1tica de One Piece!\n*   **ONE PIECE: PIRATE WARRIORS 4** (39.99 EUR) - \u00a1M\u00e1s acci\u00f3n de One Piece!\n"
+  },
+  {
+    "timestamp": "2025-12-05T11:00:00.557454",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 403,
+    "tokens_salida": 102,
+    "tokens_totales": 505,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1A ver, a ver! Con gusto te recomiendo juegos que podr\u00edan gustarte si te gusta One Piece, aunque no tenga ninguno con piratas o anime directamente...\n\n*   No tengo ninguno de piratas, pero te recomiendo echarle un ojo a **Baldur's Gate 3** (Precio no disponible) - Es un RPG con mucha historia, personajes memorables y combates por turnos. Si te gusta la aventura y explorar mundos, \u00a1este te va a encantar!\n"
+  },
+  {
+    "timestamp": "2025-12-05T11:00:33.956681",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 403,
+    "tokens_salida": 325,
+    "tokens_totales": 728,
+    "elastic_score": 0.0,
+    "pregunta": "Dame 5 juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1A ver, a ver! Con lo de One Piece, entiendo que buscas aventuras, acci\u00f3n y quiz\u00e1s un mundo abierto con personajes carism\u00e1ticos, \u00bfverdad? Aunque no tengo \"One Piece\" en la lista (\u00a1ojal\u00e1!), te puedo recomendar estos que tienen ese rollo aventurero:\n\n1.  *   **Sea of Thieves** (Precio no disponible) - \u00a1Este te va a encantar! Es un juego de piratas donde puedes navegar, luchar y buscar tesoros con amigos. \u00a1Muy parecido al esp\u00edritu de One Piece!\n2.  *   **Genshin Impact** (Precio no disponible) - Au"
+  },
+  {
+    "timestamp": "2025-12-05T11:13:10.336252",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1335,
+    "tokens_salida": 313,
+    "tokens_totales": 1648,
+    "elastic_score": 20.219372,
+    "pregunta": "Dame todos los juegos que tengas",
+    "respuesta": "\u00a1Claro, aqu\u00ed tienes todos los juegos que tengo disponibles!\n\n*   **Rue Valley** (29.99 EUR) - Un RPG narrativo con una historia interesante.\n*   **Tingus Goose** (5.85 EUR) - Un juego inactivo muy peculiar.\n*   **Buggos 2** (19.5 EUR) - Un juego de estrategia donde controlas enjambres de bichos.\n*   **Caves of Qud** (28.99 EUR) - Un roguelike de ciencia-fantas\u00eda con mucha exploraci\u00f3n.\n*   **Leaf Blower Co.** (19.49 EUR) - Un simulador relajante para soplar hojas.\n*   **Dome Keeper** (17.99 EUR) "
+  },
+  {
+    "timestamp": "2025-12-05T11:28:00.587577",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1335,
+    "tokens_salida": 329,
+    "tokens_totales": 1664,
+    "elastic_score": 20.219372,
+    "pregunta": "Dame todos los juegos que tengas",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed tienes todos los juegos que tengo disponibles:\n\n*   **Rue Valley** (29.99 EUR) - Un RPG narrativo con una historia compleja y bucles temporales.\n*   **Tingus Goose** (5.85 EUR) - Un juego inactivo absurdo donde construyes un imperio.\n*   **Buggos 2** (19.5 EUR) - Un juego de estrategia donde controlas una colmena de bichos.\n*   **Caves of Qud** (28.99 EUR) - Un roguelike de ciencia-fantas\u00eda con mucha exploraci\u00f3n.\n*   **Leaf Blower Co.** (19.49 EUR) - Un simulador relajante de"
+  },
+  {
+    "timestamp": "2025-12-05T11:29:21.557021",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1250,
+    "tokens_salida": 166,
+    "tokens_totales": 1416,
+    "elastic_score": 42.3239,
+    "pregunta": "Dame todos los juegos que sean parecidos a One Piece",
+    "respuesta": "\u00a1Claro! Bas\u00e1ndome en los juegos que tengo, te recomiendo los siguientes que tienen que ver con One Piece:\n\n*   **ONE PIECE ODYSSEY** (39.99 EUR) - Es un RPG ambientado en el mundo de One Piece, \u00a1as\u00ed que te sumergir\u00e1s en la aventura!\n*   **ONE PIECE Bounty Rush** (GRATIS) - Si te gustan los juegos de acci\u00f3n multijugador, \u00a1este es para ti! Es un 4v4 donde te enfrentas a otros equipos.\n*   **ONE PIECE: PIRATE WARRIORS 4** (39.99 EUR) - \u00a1M\u00e1s acci\u00f3n de One Piece! Este juego te pone en combates \u00e9picos"
+  },
+  {
+    "timestamp": "2025-12-05T11:30:42.539262",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1350,
+    "tokens_salida": 199,
+    "tokens_totales": 1549,
+    "elastic_score": 40.761703,
+    "pregunta": "Dame todos los juegos parecidos a Risk of Rain",
+    "respuesta": "\u00a1Claro que s\u00ed! Si te gusta **Risk of Rain**, te van a encantar estos:\n\n*   **Risk of Rain (2013)** (9.99 EUR) - \u00a1El original!\n*   **Risk of Rain Returns** (9.74 EUR) - Una remasterizaci\u00f3n.\n*   **Risk of Rain 2** (8.24 EUR) - La secuela, con acci\u00f3n en 3D.\n*   **Risk of Rain 2: Alloyed Collective** (14.99 EUR) - Una expansi\u00f3n de Risk of Rain 2.\n*   **Risk of Rain 2: Seekers of the Storm** (9.74 EUR) - Otra expansi\u00f3n de Risk of Rain 2.\n*   **Risk of Rain 2: Survivors of the Void** (9.74 EUR) - \u00a1Otr"
+  },
+  {
+    "timestamp": "2025-12-05T11:46:23.917607",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1282,
+    "tokens_salida": 17,
+    "tokens_totales": 1299,
+    "elastic_score": 20.219372,
+    "pregunta": "Dame los juegos gratis que tengas",
+    "respuesta": "\u00a1Uy, no tengo juegos gratis en esta lista! Todos tienen un precio.\n"
+  },
+  {
+    "timestamp": "2025-12-05T11:46:50.238382",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1265,
+    "tokens_salida": 43,
+    "tokens_totales": 1308,
+    "elastic_score": 20.219372,
+    "pregunta": "Dame todos los juegos gratis que tengas",
+    "respuesta": "\u00a1Claro que s\u00ed! Aqu\u00ed tienes los juegos gratuitos que tengo disponibles:\n\n*   **LoveCraft** (GRATIS) - \u00a1Perfecto para explorar, socializar y crear tu propio mundo virtual!"
+  },
+  {
+    "timestamp": "2025-12-05T11:46:57.219263",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1265,
+    "tokens_salida": 46,
+    "tokens_totales": 1311,
+    "elastic_score": 20.219372,
+    "pregunta": "Dame todos los juegos gratis que tengas",
+    "respuesta": "\u00a1Claro que s\u00ed! Aqu\u00ed tienes el juego gratis que tengo disponible:\n\n*   **LoveCraft** (GRATIS) - Es un simulador que te permite crear tu propio mundo y explorar en realidad virtual.\n"
+  },
+  {
+    "timestamp": "2025-12-05T11:47:12.749576",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1290,
+    "tokens_salida": 108,
+    "tokens_totales": 1398,
+    "elastic_score": 18.94561,
+    "pregunta": "Dame todos los juegos gratis",
+    "respuesta": "\u00a1Claro que s\u00ed! Aqu\u00ed tienes todos los juegos gratuitos de la lista:\n\n*   **Zerowake GATES** (GRATIS) - Un RPG de acci\u00f3n y estrategia.\n*   **THE FINALS** (GRATIS) - Un juego de combate en arenas virtuales.\n*   **LET IT DIE** (GRATIS) - Un juego de acci\u00f3n y supervivencia.\n*   **Destiny\u00a02: Los Desertores** (Gratis) - Un juego de acci\u00f3n y aventura."
+  },
+  {
+    "timestamp": "2025-12-05T11:56:05.233477",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1265,
+    "tokens_salida": 50,
+    "tokens_totales": 1315,
+    "elastic_score": 20.219372,
+    "pregunta": "Dame todos los juegos gratis que tengas",
+    "respuesta": "\u00a1Claro que s\u00ed! Aqu\u00ed tienes el \u00fanico juego gratis que tengo en la lista:\n\n*   **LoveCraft** (GRATIS) - Es un simulador que te permite crear tu propio mundo y vivir aventuras en realidad virtual.\n"
+  },
+  {
+    "timestamp": "2025-12-05T11:56:49.277522",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1350,
+    "tokens_salida": 157,
+    "tokens_totales": 1507,
+    "elastic_score": 40.761703,
+    "pregunta": "Dame todos los juegos parecidos a Risk of Rain",
+    "respuesta": "\u00a1Claro! Bas\u00e1ndome en los juegos que tengo disponibles, te puedo recomendar los siguientes, ya que todos pertenecen a la saga **Risk of Rain**:\n\n*   **Risk of Rain** (9.99 EUR)\n*   **Risk of Rain Returns** (9.74 EUR)\n*   **Risk of Rain 2** (8.24 EUR)\n*   **Risk of Rain 2: Alloyed Collective** (14.99 EUR)\n*   **Risk of Rain 2: Seekers of the Storm** (9.74 EUR)\n*   **Risk of Rain 2: Survivors of the Void** (9.74 EUR)\n\n\u00a1Espero que los disfrutes!\n"
+  },
+  {
+    "timestamp": "2025-12-05T11:58:45.839963",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1350,
+    "tokens_salida": 257,
+    "tokens_totales": 1607,
+    "elastic_score": 40.761703,
+    "pregunta": "Dame todos los juegos parecidos a Risk of Rain",
+    "respuesta": "\u00a1Claro! Bas\u00e1ndome en los juegos que tengo disponibles, aqu\u00ed tienes los que se parecen m\u00e1s a **Risk of Rain**:\n\n*   **Risk of Rain** (9.99 EUR) - El original, \u00a1claro! Es un juego de acci\u00f3n con elementos roguelike.\n*   **Risk of Rain Returns** (9.74 EUR) - \u00a1La versi\u00f3n remasterizada! Con nuevos modos de juego y multijugador renovado.\n*   **Risk of Rain 2** (8.24 EUR) - La secuela, con acci\u00f3n a raudales y la posibilidad de jugar con amigos.\n*   **Risk of Rain 2: Alloyed Collective** (14.99 EUR) - Un"
+  },
+  {
+    "timestamp": "2025-12-05T12:03:06.223173",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1350,
+    "tokens_salida": 220,
+    "tokens_totales": 1570,
+    "elastic_score": 40.761703,
+    "pregunta": "Dame todos los juegos parecidos a Risk of Rain",
+    "respuesta": "\u00a1Claro! Bas\u00e1ndome en los juegos que tengo disponibles, aqu\u00ed tienes los que se parecen a **Risk of Rain**:\n\n*   **Risk of Rain** (9.99 EUR) - \u00a1El original! Es un juego de acci\u00f3n y rol con elementos roguelike.\n*   **Risk of Rain Returns** (9.74 EUR) - Una remasterizaci\u00f3n del original, con nuevos modos y mejoras.\n*   **Risk of Rain 2** (8.24 EUR) - La secuela, con acci\u00f3n intensa y la posibilidad de jugar con amigos.\n*   **Risk of Rain 2: Alloyed Collective** (14.99 EUR) - Una expansi\u00f3n de Risk of R"
+  },
+  {
+    "timestamp": "2025-12-05T12:22:49.736206",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 440,
+    "tokens_salida": 169,
+    "tokens_totales": 609,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos parecidos a Risk of Rain",
+    "respuesta": "\u00a1Claro, amigo! Aunque no puedo acceder a la lista de juegos para recomendarte, puedo decirte que **Risk of Rain** es un juegazo. Es un roguelike de acci\u00f3n con elementos de plataformas y mucha rejugabilidad. Si te gusta ese estilo, deber\u00edas buscar juegos con estas caracter\u00edsticas:\n\n*   **Roguelike:** Juegos con mapas generados proceduralmente, muerte permanente y progresi\u00f3n basada en desbloqueos.\n*   **Acci\u00f3n:** Juegos con combate en tiempo real y mucha adrenalina.\n*   **Plataformas:** Juegos don"
+  },
+  {
+    "timestamp": "2025-12-05T12:23:56.731371",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 437,
+    "tokens_salida": 73,
+    "tokens_totales": 510,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos que tengas gratis",
+    "respuesta": "\u00a1Claro que s\u00ed, amigo! Bas\u00e1ndome en la informaci\u00f3n que tengo, no puedo darte una lista de juegos gratuitos en este momento. Parece que hay un problema t\u00e9cnico y no puedo acceder a la lista de juegos disponibles. \u00a1Pero no te preocupes! En cuanto se solucione, te preparo una lista con los mejores juegos gratuitos.\n"
+  },
+  {
+    "timestamp": "2025-12-05T12:24:18.511511",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 436,
+    "tokens_salida": 50,
+    "tokens_totales": 486,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos que tengas gratis",
+    "respuesta": "\u00a1Claro que s\u00ed! Aunque no puedo ver la lista de juegos que tienes, usualmente hay varios juegos gratuitos disponibles en Steam. Te sugiero que revises la tienda de Steam directamente, \u00a1seguro encuentras algo que te guste!\n"
+  },
+  {
+    "timestamp": "2025-12-05T12:25:55.216233",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 437,
+    "tokens_salida": 59,
+    "tokens_totales": 496,
+    "elastic_score": 0.0,
+    "pregunta": "Dame todos los juegos que tengas gratis",
+    "respuesta": "\u00a1Claro, amigo! Lamento que haya un error con la lista de juegos, pero no te preocupes, har\u00e9 lo posible con lo que tengo. Parece que no puedo acceder a la lista de juegos actualmente. Por lo tanto, no puedo recomendarte ninguno que sea gratis.\n"
+  },
+  {
+    "timestamp": "2025-12-05T12:26:12.825266",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 437,
+    "tokens_salida": 30,
+    "tokens_totales": 467,
+    "elastic_score": 0.0,
+    "pregunta": "Dame 5 juegos que tengas gratis",
+    "respuesta": "\u00a1Vaya, qu\u00e9 buena pregunta! Pero, por lo que veo, no tengo informaci\u00f3n sobre ning\u00fan juego en este momento. \u00a1Lo siento!\n"
+  },
+  {
+    "timestamp": "2025-12-05T12:26:34.574362",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 438,
+    "tokens_salida": 69,
+    "tokens_totales": 507,
+    "elastic_score": 0.0,
+    "pregunta": "Dame 5 juegos que tengas gratis",
+    "respuesta": "\u00a1Hola! Parece que hay un problemilla con la conexi\u00f3n a la base de datos de juegos. Por desgracia, no puedo recomendarte ning\u00fan juego gratis en este momento porque no tengo acceso a esa informaci\u00f3n. \u00a1Pero no te preocupes! En cuanto se solucione, estar\u00e9 encantado de ayudarte a encontrar juegazos.\n"
+  },
+  {
+    "timestamp": "2025-12-05T12:31:39.077165",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 438,
+    "tokens_salida": 22,
+    "tokens_totales": 460,
+    "elastic_score": 0.0,
+    "pregunta": "Dame 5 juegos que tengas gratis",
+    "respuesta": "\u00a1Hola! \n\nDado que no tengo informaci\u00f3n sobre juegos disponibles, no puedo recomendarte ninguno gratuito.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:05:18.719632",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1316,
+    "tokens_salida": 14,
+    "tokens_totales": 1330,
+    "elastic_score": 18.378475,
+    "pregunta": "Dame informacion sobre el Fifa",
+    "respuesta": "\u00a1Hola! No tengo informaci\u00f3n sobre FIFA entre los juegos disponibles.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:07:05.836669",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1298,
+    "tokens_salida": 89,
+    "tokens_totales": 1387,
+    "elastic_score": 80.36588,
+    "pregunta": "Dame informacion sobre el EA SPORTS FC\u2122 26",
+    "respuesta": "\u00a1Claro! Con gusto te doy informaci\u00f3n sobre el **EA SPORTS FC\u2122 26**:\n\n*   **EA SPORTS FC\u2122 26** (34.99 EUR) - Es un simulador de deportes donde puedes jugar a tu manera gracias a las mejoras en la experiencia de juego basadas en los comentarios de la comunidad. Adem\u00e1s, incluye desaf\u00edos en vivo y arquetipos inspirados en los grandes del deporte.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:13:57.474953",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1217,
+    "tokens_salida": 119,
+    "tokens_totales": 1336,
+    "elastic_score": 0.8145743,
+    "pregunta": "dame infomracion sobre el EA fc",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed tienes informaci\u00f3n sobre los juegos de EA FC:\n\n*   **EA SPORTS FC\u2122 25** (69.99 EUR) - Este juego te permite formar equipo con tus amigos en tus modos favoritos y llevar a tu club a la victoria con un control t\u00e1ctico m\u00e1s realista.\n*   **EA SPORTS FC\u2122 26** (34.99 EUR) - En este juego, el club es tuyo. Juega a tu manera con una experiencia de juego renovada impulsada por los comentarios de la comunidad.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:14:40.440583",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1197,
+    "tokens_salida": 303,
+    "tokens_totales": 1500,
+    "elastic_score": 0.8092297,
+    "pregunta": "Dime juegos de futbol",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed tienes algunas opciones de juegos de f\u00fatbol que creo que te gustar\u00e1n:\n\n*   **EA SPORTS\u2122 Madden NFL 25** (69.99 EUR) - Este es un simulador de f\u00fatbol americano.\n*   **Football Simulator** (16.79 EUR) - Otro juego de f\u00fatbol americano, con mucha acci\u00f3n.\n*   **Backyard Football '99** (9.75 EUR) - Un juego de f\u00fatbol americano m\u00e1s casual y divertido.\n*   **Football Manager 26** (59.99 EUR) - Si te va la estrategia y gesti\u00f3n, este te va a encantar.\n*   **eFootball\u2122** (GRATIS) - Un j"
+  },
+  {
+    "timestamp": "2025-12-07T13:15:10.995558",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1360,
+    "tokens_salida": 19,
+    "tokens_totales": 1379,
+    "elastic_score": 0.79364884,
+    "pregunta": "Caunto cuesta el Ea fc",
+    "respuesta": "\u00a1Hola! No tengo informaci\u00f3n sobre \"EA FC\" en mi lista de juegos disponibles.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:15:25.256855",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1110,
+    "tokens_salida": 25,
+    "tokens_totales": 1135,
+    "elastic_score": 1.0,
+    "pregunta": "Caunto cuesta el Ea fc 26",
+    "respuesta": "\u00a1Hola! No tengo informaci\u00f3n sobre el juego \"Ea fc 26\" en mi lista de juegos disponibles.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:15:45.413356",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1112,
+    "tokens_salida": 45,
+    "tokens_totales": 1157,
+    "elastic_score": 1.0,
+    "pregunta": "Caunto cuesta el EA SPORTS FC\u2122 26",
+    "respuesta": "\u00a1Vaya! No tengo informaci\u00f3n sobre el EA SPORTS FC\u2122 26 en mi lista de juegos. \u00bfTe gustar\u00eda que te recomendara algo diferente? Tal vez alguno de los que tengo disponibles te interese.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:16:28.274217",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1112,
+    "tokens_salida": 23,
+    "tokens_totales": 1135,
+    "elastic_score": 1.0,
+    "pregunta": "Cuanto cuesta el EA SPORTS FC\u2122 26",
+    "respuesta": "\u00a1Hola! Por la lista de juegos que tengo, no encuentro el EA SPORTS FC\u2122 26.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:17:58.565448",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1355,
+    "tokens_salida": 67,
+    "tokens_totales": 1422,
+    "elastic_score": 0.7331056,
+    "pregunta": "Dame infomracion sobre el counter strike",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed tienes informaci\u00f3n sobre **Counter-Strike**:\n\n*   **Counter-Strike** (8.19 EUR) - Es el juego de acci\u00f3n en l\u00ednea n\u00famero 1 del mundo. Si te gusta la acci\u00f3n y los juegos por equipos, \u00a1este es un cl\u00e1sico que no puedes perderte!\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:19:17.137433",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1368,
+    "tokens_salida": 14,
+    "tokens_totales": 1382,
+    "elastic_score": 1.0,
+    "pregunta": "Cuanto cuesta el EA SPORTS FC\u2122 24",
+    "respuesta": "Lo siento, no tengo informaci\u00f3n sobre ese juego en mi lista.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:21:50.585369",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1220,
+    "tokens_salida": 54,
+    "tokens_totales": 1274,
+    "elastic_score": 0.7828372,
+    "pregunta": "Dime un juego parecido al counter strike",
+    "respuesta": "\u00a1Claro! Si te gusta **Counter-Strike**, te recomiendo echarle un ojo a:\n\n*   **Counter-Strike 2** (GRATIS) - Es el siguiente cap\u00edtulo de la saga, \u00a1as\u00ed que seguro te encantar\u00e1!\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:22:22.872480",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1253,
+    "tokens_salida": 158,
+    "tokens_totales": 1411,
+    "elastic_score": 0.8608868,
+    "pregunta": "Dime un juego parecido al Battlefield\u2122 6",
+    "respuesta": "\u00a1Claro! Si te gust\u00f3 **Battlefield\u2122 6**, te recomiendo echarle un ojo a:\n\n*   **Battlefield\u2122 V** (49.99 EUR) -  Es otro juego de la saga Battlefield, as\u00ed que la experiencia de combate y acci\u00f3n es muy similar.\n*   **Battlefield\u2122 1** (39.99 EUR) - Tambi\u00e9n es de la misma saga, con batallas multijugador \u00e9picas.\n*   **Armored Warfare** (GRATIS) - Si te gustan los tanques y la acci\u00f3n, este juego gratuito te va a encantar.\n*   **Warfare Legacy Collection** (9.75 EUR) - Tiene acci\u00f3n en la vanguardia, com"
+  },
+  {
+    "timestamp": "2025-12-07T13:26:03.084725",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1262,
+    "tokens_salida": 183,
+    "tokens_totales": 1445,
+    "elastic_score": 0.79327536,
+    "pregunta": "Dime un juego de peleas",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed tienes algunas opciones que te van a encantar:\n\n*   **DEAD OR ALIVE 5 Last Round: Core Fighters** (GRATIS) - \u00a1Es gratis y pura acci\u00f3n de peleas!\n*   **A Gentlemen's Dispute** (7.49 EUR) - Un juego de peleas con un toque elegante y estrat\u00e9gico.\n*   **Stick Fight: The Game** (1.9 EUR) - Acci\u00f3n desenfadada y divertida con figuras de palitos.\n*   **We Who Are About To Die** (21.99 EUR) - Aunque es m\u00e1s que peleas, tiene combate y estrategia en arenas.\n*   **Your Only Move Is HUSTL"
+  },
+  {
+    "timestamp": "2025-12-07T13:26:59.675676",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1350,
+    "tokens_salida": 25,
+    "tokens_totales": 1375,
+    "elastic_score": 1.0,
+    "pregunta": "Dime el precio de Counter-Strike 2",
+    "respuesta": "\u00a1Hola! \n\nEn la lista de juegos que tengo, no hay informaci\u00f3n sobre **Counter-Strike 2**.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:28:11.946639",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1350,
+    "tokens_salida": 20,
+    "tokens_totales": 1370,
+    "elastic_score": 1.0,
+    "pregunta": "Dime el precio de Counter-Strike 2",
+    "respuesta": "No tengo informaci\u00f3n sobre Counter-Strike 2 en la lista de juegos que me diste.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:28:36.697005",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1261,
+    "tokens_salida": 71,
+    "tokens_totales": 1332,
+    "elastic_score": 48.66965,
+    "pregunta": "Dime infomracion  de Counter-Strike 2",
+    "respuesta": "\u00a1Claro! Con gusto te doy informaci\u00f3n sobre **Counter-Strike 2**:\n\n*   **Counter-Strike 2** (GRATIS) - Es un juego de acci\u00f3n y es gratis para jugar. Es la nueva versi\u00f3n de CS, as\u00ed que si te gusta la acci\u00f3n y los juegos competitivos, \u00a1este es el indicado!\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:28:56.303357",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1261,
+    "tokens_salida": 40,
+    "tokens_totales": 1301,
+    "elastic_score": 48.66965,
+    "pregunta": "Dime infomracion  de Counter-Strike 2",
+    "respuesta": "\u00a1Claro! Aqu\u00ed tienes informaci\u00f3n sobre **Counter-Strike 2**:\n\n*   **Counter-Strike 2** (GRATIS) - El pr\u00f3ximo cap\u00edtulo en la historia de CS."
+  },
+  {
+    "timestamp": "2025-12-07T13:29:45.394894",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1247,
+    "tokens_salida": 41,
+    "tokens_totales": 1288,
+    "elastic_score": 0.80734694,
+    "pregunta": "Dime informacion del Counter-Strike 2",
+    "respuesta": "\u00a1Claro! Aqu\u00ed tienes la informaci\u00f3n sobre **Counter-Strike 2**:\n\n*   **Counter-Strike 2** (GRATIS) - El pr\u00f3ximo cap\u00edtulo en la historia de CS."
+  },
+  {
+    "timestamp": "2025-12-07T13:30:14.645410",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1244,
+    "tokens_salida": 61,
+    "tokens_totales": 1305,
+    "elastic_score": 0.82643384,
+    "pregunta": "De que va el Counter-Strike 2",
+    "respuesta": "\u00a1Hola! Si te interesa saber de qu\u00e9 va el **Counter-Strike 2**, aqu\u00ed te va:\n\n*   **Counter-Strike 2** (GRATIS) - Es el nuevo cap\u00edtulo en la historia de CS, un juego de acci\u00f3n competitivo para muchos jugadores en todo el mundo."
+  },
+  {
+    "timestamp": "2025-12-07T13:31:20.888430",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1350,
+    "tokens_salida": 21,
+    "tokens_totales": 1371,
+    "elastic_score": 1.0,
+    "pregunta": "Cuanto cuesta el  Counter-Strike 2",
+    "respuesta": "\u00a1Hola! No tengo informaci\u00f3n sobre Counter-Strike 2 en la lista de juegos que tengo.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:35:13.889107",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1322,
+    "tokens_salida": 45,
+    "tokens_totales": 1367,
+    "elastic_score": 0.8462265,
+    "pregunta": "De que va el juego Grand Theft Auto V",
+    "respuesta": "\u00a1Hola! \ud83d\ude03\n\nEl juego **Grand Theft Auto V Enhanced** (**14.99 EUR**) es un superventas que te ofrece acci\u00f3n, aventura y carreras. \u00a1Te va a encantar!\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:42:57.760793",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 2618,
+    "tokens_salida": 20,
+    "tokens_totales": 2638,
+    "elastic_score": 1.0,
+    "pregunta": "Dime el precio de Counter-Strike 2",
+    "respuesta": "No tengo informaci\u00f3n sobre Counter-Strike 2 en la lista de juegos que me proporcionaste.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:43:22.848490",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 2200,
+    "tokens_salida": 96,
+    "tokens_totales": 2296,
+    "elastic_score": 0.8462265,
+    "pregunta": "De que va el juego Grand Theft Auto V",
+    "respuesta": "\u00a1Claro! \n\nTe recomiendo echarle un ojo a **Grand Theft Auto V Enhanced** (**14.99 EUR**). \n\nVa de un joven estafador, un ladr\u00f3n de bancos retirado y un psic\u00f3pata que se ven involucrados en el mundo criminal, el gobierno de EE. UU. y la industria del espect\u00e1culo. Tendr\u00e1n que hacer golpes para sobrevivir en una ciudad implacable. \u00a1Es pura acci\u00f3n y aventura!\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:44:50.951401",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 2280,
+    "tokens_salida": 75,
+    "tokens_totales": 2355,
+    "elastic_score": 0.8215468,
+    "pregunta": "dime juegos de Rockstar North",
+    "respuesta": "\u00a1Claro que s\u00ed! Bas\u00e1ndome en los juegos que tengo disponibles, te recomiendo:\n\n*   **Red Dead Redemption 2** (Precio Calculado: 14.99 EUR) - Aunque no es de Northgard, es un juegazo de **Rockstar** con mucha acci\u00f3n y aventura, \u00a1seguro que te engancha!\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:45:36.488328",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 2531,
+    "tokens_salida": 36,
+    "tokens_totales": 2567,
+    "elastic_score": 0.7641786,
+    "pregunta": "dime juegos de pelotas",
+    "respuesta": "\u00a1Claro! \u00a1Mira!\n\n*   **BALL x PIT** (14.99 EUR) -  Aqu\u00ed tienes un juego donde tienes que usar bolas.\n"
+  },
+  {
+    "timestamp": "2025-12-07T13:46:49.159960",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1309,
+    "tokens_salida": 169,
+    "tokens_totales": 1478,
+    "elastic_score": 0.8215468,
+    "pregunta": "dime juegos de Rockstar North",
+    "respuesta": "\u00a1Claro! Bas\u00e1ndome en los juegos que tengo disponibles, te puedo recomendar los siguientes t\u00edtulos de Rockstar North:\n\n*   **Red Dead Redemption 2** (14.99 EUR) - \u00a1Este juego es una pasada! Es una aventura \u00e9pica con una historia incre\u00edble.\n*   **Red Dead Online** (19.99 EUR) - Si te gusta la acci\u00f3n y la aventura, pero quieres jugar con amigos, \u00a1este es tu juego!\n*   **Grand Theft Auto V Enhanced** (14.99 EUR) - \u00a1Un cl\u00e1sico! Acci\u00f3n, aventura y carreras en un mundo abierto enorme.\n*   **Red Dead Re"
+  },
+  {
+    "timestamp": "2025-12-08T16:23:04.919592",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1194,
+    "tokens_salida": 143,
+    "tokens_totales": 1337,
+    "elastic_score": 0.8252959,
+    "pregunta": "Que opinas del Battlefield",
+    "respuesta": "\u00a1Hola! \u00a1Qu\u00e9 buena pregunta! \n\nSi te gusta la acci\u00f3n y la guerra a gran escala, los **Battlefield** son una excelente opci\u00f3n. \u00a1Te recomiendo echarle un ojo a estos!\n\n*   **Battlefield\u2122 V** (49.99 EUR) -  Si quieres la mejor experiencia de Battlefield V, este te va a encantar.\n*   **Battlefield\u2122 6** (59.49 EUR) -  La experiencia b\u00e9lica definitiva con tanques, aviones y mucho arsenal.\n*   **Battlefield\u2122 1** (39.99 EUR) -  Para vivir la guerra total y batallas \u00e9picas.\n"
+  },
+  {
+    "timestamp": "2025-12-08T16:26:20.209700",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1307,
+    "tokens_salida": 351,
+    "tokens_totales": 1658,
+    "elastic_score": 0.8401524,
+    "pregunta": "Que opinas de los juegos de pistolas que tienes",
+    "respuesta": "\u00a1Hola! \u00a1Veo que te interesan los juegos de pistolas! \u00a1Tengo varias opciones que te podr\u00edan gustar!\n\n*   **Gunsmith Simulator** (14.7 EUR) - Este te va a encantar si te gusta personalizar y trabajar con armas. \u00a1Es como tener tu propio taller!\n*   **Buckshot Roulette** (2.99 EUR) - Si buscas algo con mucha tensi\u00f3n y acci\u00f3n, \u00a1este es perfecto! Es como una ruleta rusa, pero con un arma.\n*   **World of Guns: Gun Disassembly** (GRATIS) - \u00a1Y este es gratis! Te permite explorar los mecanismos internos d"
+  },
+  {
+    "timestamp": "2025-12-08T16:28:24.678062",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1411,
+    "tokens_salida": 397,
+    "tokens_totales": 1808,
+    "elastic_score": 0.8401524,
+    "pregunta": "Que opinas de los juegos de pistolas que tienes",
+    "respuesta": "\u00a1Uff, me encantan los juegos de pistolas! Tengo unos cuantos aqu\u00ed que te van a encantar.\n\n*   **Gunsmith Simulator** (14.7 EUR): Este es para los manitas. Te pones en la piel de un armero, reparando, restaurando y personalizando armas. \u00a1Imagina la satisfacci\u00f3n de crear tu propia obra maestra!\n*   **Buckshot Roulette** (2.99 EUR): \u00bfTe va la adrenalina? Este es un juego de ruleta rusa con una escopeta. \u00a1Tensi\u00f3n pura!\n*   **World of Guns: Gun Disassembly** (GRATIS): Si quieres aprender sobre armas,"
+  },
+  {
+    "timestamp": "2025-12-08T16:29:13.845476",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1337,
+    "tokens_salida": 271,
+    "tokens_totales": 1608,
+    "elastic_score": 0.7969688,
+    "pregunta": "Que juegos me recomiendas de futbol",
+    "respuesta": "\u00a1Uff, qu\u00e9 buena pregunta! Si te va el f\u00fatbol, tengo algunas opciones que te pueden molar:\n\n*   **EA SPORTS\u2122 Madden NFL 25** (69.99 EUR) - Este es un juegazo si te va el f\u00fatbol americano. Tienes mucha estrategia y simulaci\u00f3n, \u00a1es como estar en el campo!\n*   **EA SPORTS FC\u2122 25** (69.99 EUR) - Si te va el f\u00fatbol de verdad, este es el que tienes que pillar. Es el m\u00e1s completo, con muchos modos de juego y gr\u00e1ficos incre\u00edbles.\n*   **eFootball\u2122** (GRATIS) - \u00a1Y encima es gratis! Puedes jugar al f\u00fatbol s"
+  },
+  {
+    "timestamp": "2025-12-08T16:29:53.369867",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1451,
+    "tokens_salida": 292,
+    "tokens_totales": 1743,
+    "elastic_score": 0.7613957,
+    "pregunta": "Que juegos son baratos ",
+    "respuesta": "\u00a1Hola, amigo! \u00a1Claro que s\u00ed! Aqu\u00ed te va una lista de juegos que no te har\u00e1n temblar la cartera:\n\n*   **My Wife Threw Out My Card Collection (So I Bought a Dump to Find Them All)** (4.67 EUR) - Un simulador muy peculiar y relajante. \u00a1Perfecto para desconectar!\n*   **Q-UP** (9.75 EUR) - Un juego de estrategia y simulaci\u00f3n bastante original con un toque de humor.\n*   **Gamestonk Simulator: Gone Rogue** (10.79 EUR) - Si te gustan los simuladores y el mundo de los negocios, este es para ti.\n*   **Car"
+  },
+  {
+    "timestamp": "2025-12-08T16:30:50.436080",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1395,
+    "tokens_salida": 221,
+    "tokens_totales": 1616,
+    "elastic_score": 0.78768176,
+    "pregunta": "Que juegos son gratuitos",
+    "respuesta": "\u00a1Claro que s\u00ed, amigo! Aqu\u00ed tienes los juegos gratuitos que tengo en mi lista:\n\n*   **UNDECEMBER** - Un RPG de acci\u00f3n con runas y habilidades para combinar. \u00a1Ideal para los amantes de la acci\u00f3n y la personalizaci\u00f3n!\n*   **3on3 FreeStyle: Rebound** - \u00a1Si te va el baloncesto callejero, este es tu juego! Acci\u00f3n 3v3 con mates espectaculares.\n*   **Idle Clans** - Un MMORPG ocioso para disfrutar de la experiencia cl\u00e1sica sin tanto compromiso de tiempo.\n*   **LET IT DIE** - Un juego de acci\u00f3n y superviv"
+  },
+  {
+    "timestamp": "2025-12-08T16:31:51.038055",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1342,
+    "tokens_salida": 379,
+    "tokens_totales": 1721,
+    "elastic_score": 1.6979055,
+    "pregunta": "Dime juegos que cuesten 10 euros",
+    "respuesta": "\u00a1Claro, amigo! Tengo varios juegazos por 10 euritos:\n\n*   **Los Sims\u2122 4 Portentos del Punto Pack de Accesorios** (9.99 EUR) - \u00a1Perfecto para los que les gusta la vida tranquila y creativa!\n*   **Los Sims\u2122 4 Noche de Bolos Pack de Accesorios** (9.99 EUR) - Si te va la bolera, \u00a1este es tu pack!\n*   **Sticky Business** (9.99 EUR) - \u00a1Monta tu negocio de pegatinas y demuestra tu creatividad!\n*   **Quiplash** (9.99 EUR) - \u00a1Un juego para re\u00edr y pasarla bien con amigos!\n*   **Farming Simulator 25: Plain"
+  },
+  {
+    "timestamp": "2025-12-08T16:32:27.963352",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1420,
+    "tokens_salida": 281,
+    "tokens_totales": 1701,
+    "elastic_score": 0.8207012,
+    "pregunta": "Que opinas de los juego de pistolas",
+    "respuesta": "\u00a1Uff, los juegos de pistolas! Me encantan. Depende mucho de lo que busques, pero en general tengo una opini\u00f3n bastante clara.\n\nSi te va la acci\u00f3n pura y dura, y te gusta la personalizaci\u00f3n, **Gunsmith Simulator** es un juegazo. Te metes en la piel de un armero y puedes trastear con armas, repararlas y modificarlas. \u00a1Es como tener tu propio taller! Y lo mejor es que lo tengo por aqu\u00ed a 14.7 EUR.\n\nSi buscas algo con m\u00e1s rollo, y no te importa el riesgo, **Buckshot Roulette** es una experiencia muy"
+  },
+  {
+    "timestamp": "2025-12-08T16:33:35.154257",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1342,
+    "tokens_salida": 387,
+    "tokens_totales": 1729,
+    "elastic_score": 1.6979055,
+    "pregunta": "Dime juegos que cuesten 10 euros",
+    "respuesta": "\u00a1Claro, amigo! Tengo algunos juegos que te pueden interesar por ese precio:\n\n*   **Los Sims\u2122 4 Portentos del Punto Pack de Accesorios** (9.99 EUR) - Si te va la onda de crear y simular, este pack es ideal para tejer y decorar.\n*   **Los Sims\u2122 4 Noche de Bolos Pack de Accesorios** (9.99 EUR) - Para construir tu propia bolera y pasar un buen rato con tus Sims.\n*   **Sticky Business** (9.99 EUR) - Un juego casual donde puedes crear pegatinas y gestionar tu propio negocio.\n*   **Quiplash** (9.99 EUR"
+  },
+  {
+    "timestamp": "2025-12-08T16:37:56.410240",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1330,
+    "tokens_salida": 415,
+    "tokens_totales": 1745,
+    "elastic_score": 0.69267046,
+    "pregunta": "Dime juegos que cuesten 10 euro",
+    "respuesta": "\u00a1Claro que s\u00ed, amigo! Aqu\u00ed tienes algunos juegazos que te entran en el presupuesto:\n\n*   **Los Sims\u2122 4 Portentos del Punto Pack de Accesorios** (9.99 EUR) - \u00a1A tejer se ha dicho! Ideal para los que les gusta la calma y la creatividad.\n*   **Los Sims\u2122 4 Noche de Bolos Pack de Accesorios** (9.99 EUR) - \u00a1A construir la bolera perfecta y a darle a los bolos!\n*   **Sticky Business** (9.99 EUR) - \u00a1Monta tu tienda de pegatinas! Muy relajante y con un toque creativo.\n*   **Planet Zoo: Europe Pack** (9.9"
+  },
+  {
+    "timestamp": "2025-12-08T16:39:47.124498",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1349,
+    "tokens_salida": 292,
+    "tokens_totales": 1641,
+    "elastic_score": 0.8336382,
+    "pregunta": "Cual es tu opinion sobre los juegos que tienes de aventura",
+    "respuesta": "\u00a1Uff, los juegos de aventura! Me encantan. Mira, de los que tengo por aqu\u00ed, hay para todos los gustos:\n\n*   **I Expect You To Die** (11.49 EUR): Este es un juegazo de realidad virtual. Te pone en la piel de un agente secreto, resolviendo rompecabezas alucinantes. \u00a1La inmersi\u00f3n es total!\n*   **We Were Here Expeditions: The FriendShip** (3.99 EUR): Si te va jugar con un amigo, este es perfecto. Es pura cooperaci\u00f3n, resolviendo acertijos en un parque de atracciones abandonado. La comunicaci\u00f3n es cl"
+  },
+  {
+    "timestamp": "2025-12-08T16:41:53.160381",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1409,
+    "tokens_salida": 289,
+    "tokens_totales": 1698,
+    "elastic_score": 0.79344314,
+    "pregunta": "Que opnas de la politica",
+    "respuesta": "\u00a1Uff, la pol\u00edtica es un tema que da para mucho! Es como un juego en s\u00ed mismo, \u00bfsabes? Un simulador, dir\u00eda yo... Y hablando de simuladores, tengo unos cuantos en mi lista que te podr\u00edan interesar.\n\nPor ejemplo, est\u00e1 **Democracy 4** a 28.99 EUR, donde te pones en la piel del presidente y tienes que tomar decisiones para tu pa\u00eds. O **Suzerain** a 18.99 EUR, que es una aventura de rol donde eres el presidente de Sordland y tienes que lidiar con mil problemas. \u00a1Es una pasada c\u00f3mo tus decisiones afect"
+  },
+  {
+    "timestamp": "2025-12-08T16:46:00.745601",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1439,
+    "tokens_salida": 208,
+    "tokens_totales": 1647,
+    "elastic_score": 0.79919755,
+    "pregunta": "Dime juegos de magia",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed tienes algunos juegos de magia que tengo en mi lista, \u00a1prep\u00e1rate para la aventura!\n\n*   **Magic: The Gathering Arena** (Gratis) - \u00a1Un juegazo de estrategia con cartas! Empiezas gratis y puedes enfrentarte a tus amigos.\n*   **Amelie falls over and over again ~ An endless week in Magic Academy** (13.79 EUR) -  Eres un mago y tendr\u00e1s que investigar, \u00a1suena interesante!\n*   **Wizard101** (Gratis) - Un MMORPG por turnos con magia, \u00a1y es gratis para empezar!\n*   **Dark Messiah of M"
+  },
+  {
+    "timestamp": "2025-12-08T16:46:36.595236",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1501,
+    "tokens_salida": 60,
+    "tokens_totales": 1561,
+    "elastic_score": 0.7683207,
+    "pregunta": "Dime juegos que salieron en el a\u00f1o 2012",
+    "respuesta": "\u00a1Hola, amigo! Entiendo que buscas juegos del 2012, pero en mi lista no tengo esa informaci\u00f3n. Lo que s\u00ed puedo hacer es recomendarte algunos juegazos que tengo disponibles y que te van a encantar. \u00bfQu\u00e9 te parece si te doy algunas opciones?\n"
+  },
+  {
+    "timestamp": "2025-12-08T16:47:27.082725",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1454,
+    "tokens_salida": 153,
+    "tokens_totales": 1607,
+    "elastic_score": 0.7912496,
+    "pregunta": "Dime juegos que salieron en el a\u00f1o 2021",
+    "respuesta": "\u00a1Uff, qu\u00e9 buena pregunta! Es dif\u00edcil saber qu\u00e9 juegos salieron exactamente en 2021 de mi lista, pero... \u00a1tengo opciones muy interesantes!\n\n*   **Battlefield\u2122 2042** (59.99 EUR) - Aunque no s\u00e9 si sali\u00f3 en 2021, \u00a1es un juegazo de acci\u00f3n con mucha guerra!\n*   **Reverse: 1999** (GRATIS) - Este RPG es m\u00e1s reciente, pero \u00a1es gratis y tiene una ambientaci\u00f3n muy chula!\n*   **Business Simulator 2026** (11.99 EUR) - Si te va la estrategia, este simulador te encantar\u00e1.\n"
+  },
+  {
+    "timestamp": "2025-12-08T16:52:51.169922",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1403,
+    "tokens_salida": 337,
+    "tokens_totales": 1740,
+    "elastic_score": 0.8146603,
+    "pregunta": "Dime juegos de disparos",
+    "respuesta": "\u00a1Hombre, claro que s\u00ed! Aqu\u00ed te va una lista de juegos de disparos que tengo en mi cat\u00e1logo, con sus precios y un poco de info para que te animes:\n\n*   **KILL KNIGHT** (7.39 EUR) - Un juego de acci\u00f3n isom\u00e9trico muy fren\u00e9tico, perfecto si te va la acci\u00f3n directa y sin complicaciones.\n*   **Gunsmith Simulator** (14.7 EUR) - Si te gusta trastear con armas y personalizarlas, este es tu juego. \u00a1Es como tener tu propio taller!\n*   **Showgunners** (28.99 EUR) - Combates por turnos en un entorno letal. \u00a1"
+  },
+  {
+    "timestamp": "2025-12-08T17:08:17.042163",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1401,
+    "tokens_salida": 227,
+    "tokens_totales": 1628,
+    "elastic_score": 0.77211344,
+    "pregunta": "Dime todos los juegos gratis que tengas",
+    "respuesta": "\u00a1Claro que s\u00ed, amigo! Aqu\u00ed tienes una lista de los juegos gratuitos que tengo disponibles:\n\n*   **THE FINALS** (GRATIS) - \u00a1Un espect\u00e1culo de combate brutal! Lucha con tus colegas en arenas que puedes destrozar.\n*   **Animation Throwdown: The Quest for Cards** (GRATIS) - \u00a1Re\u00fane a tus personajes favoritos de tus series animadas preferidas y a darlo todo!\n*   **Firestone \u2013 Idle Clicker Online RPG** (GRATIS) - \u00a1Rel\u00e1jate y deja que tus h\u00e9roes hagan todo el trabajo! Perfecto para jugar sin estr\u00e9s.\n*  "
+  },
+  {
+    "timestamp": "2025-12-08T17:09:40.951758",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1425,
+    "tokens_salida": 187,
+    "tokens_totales": 1612,
+    "elastic_score": 0.83641887,
+    "pregunta": "Dame todos los juegos que sean parecidos a Star Trek Online",
+    "respuesta": "\u00a1Uff, Star Trek Online es un juegazo! Si te gust\u00f3, creo que te puedo recomendar algunas opciones similares de mi lista:\n\n*   **Star Trek Timelines** (GRATIS) - Si te gusta la aventura y la estrategia, este juego te permite explorar el universo de Star Trek, \u00a1y es gratis!\n*   **Star Trek: Resurgence** (24.5 EUR) - Este juego de aventura narrativa te sumerge en el universo de Star Trek con diplomacia, desaf\u00edos y decisiones que afectar\u00e1n el destino de la galaxia.\n*   **Star Trek\u2122: Bridge Crew** (4."
+  },
+  {
+    "timestamp": "2025-12-08T17:14:53.661806",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1409,
+    "tokens_salida": 245,
+    "tokens_totales": 1654,
+    "elastic_score": 0.76118827,
+    "pregunta": "Dame todos los juegos del 2021",
+    "respuesta": "\u00a1Uf, qu\u00e9 buena pregunta! Entiendo que buscas juegos del 2021, pero en mi lista no tengo esa informaci\u00f3n espec\u00edfica. Lo que s\u00ed puedo hacer es ofrecerte algunas opciones basadas en los g\u00e9neros que te interesen. \u00bfQu\u00e9 te parece si te doy algunas recomendaciones?\n\n*   **Battlefield\u2122 2042** (59.99 EUR) - Este juego es un shooter en primera persona que te ofrece una experiencia de guerra total.\n*   **Forza Horizon 5 Apex Allstars Car Pack** (9.99 EUR) - Si te gustan los juegos de carreras, este pack te"
+  },
+  {
+    "timestamp": "2025-12-08T17:15:49.030816",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1374,
+    "tokens_salida": 333,
+    "tokens_totales": 1707,
+    "elastic_score": 0.78285146,
+    "pregunta": "Dame los titulos de juegos que salieron en el a\u00f1o 2021",
+    "respuesta": "\u00a1Uf, qu\u00e9 buena pregunta! Pero... en mi lista no tengo forma de saber la fecha de lanzamiento de cada juego, solo el t\u00edtulo, el precio y los g\u00e9neros.\n\n\u00bfQu\u00e9 te parece si te recomiendo algunos de los juegos que tengo disponibles? Puedo ofrecerte:\n\n*   **Deus Ex: Game of the Year Edition** (6.99 EUR) - Un cl\u00e1sico de acci\u00f3n con una historia que te atrapa.\n*   **Metro 2033 Redux** (19.99 EUR) - Si te va la acci\u00f3n con un toque de supervivencia y ambientaci\u00f3n post-apocal\u00edptica, \u00a1este es tu juego!\n*   **"
+  },
+  {
+    "timestamp": "2025-12-08T17:16:56.151954",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1439,
+    "tokens_salida": 169,
+    "tokens_totales": 1608,
+    "elastic_score": 0.79919755,
+    "pregunta": "Dime juegos de magia",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed te va una lista de juegos que tienen magia:\n\n*   **Magic: The Gathering Arena** (Gratis) - \u00a1Es el rey de los juegos de cartas con magia!\n*   **Amelie falls over and over again ~ An endless week in Magic Academy** (13.79 EUR) - Un juego de rol con un toque m\u00e1gico.\n*   **Wizard101** (Gratis) - Un MMORPG donde la magia es el centro de todo.\n*   **Dark Messiah of Might & Magic** (4.99 EUR) - Un RPG de acci\u00f3n donde la magia es una herramienta letal.\n*   **Waltz of the Wizard** (16"
+  },
+  {
+    "timestamp": "2025-12-08T17:18:12.523546",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1330,
+    "tokens_salida": 457,
+    "tokens_totales": 1787,
+    "elastic_score": 0.69267046,
+    "pregunta": "Dime juegos que cuesten 10 euro",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed tienes algunos juegos que cuestan 9.99 EUR, que es pr\u00e1cticamente 10 euros:\n\n*   **Los Sims\u2122 4 Portentos del Punto Pack de Accesorios** (9.99 EUR) - Si te gusta la relajaci\u00f3n y la creatividad, este pack te permite tejer y crear objetos \u00fanicos para tus Sims.\n*   **Los Sims\u2122 4 Noche de Bolos Pack de Accesorios** (9.99 EUR) - \u00a1Prepara la bolera y a jugar! Una buena forma de pasar el rato con tus Sims.\n*   **Sticky Business** (9.99 EUR) - \u00a1Uff, este es muy adictivo! Crea pegatinas"
+  },
+  {
+    "timestamp": "2025-12-08T17:18:54.151649",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1420,
+    "tokens_salida": 190,
+    "tokens_totales": 1610,
+    "elastic_score": 0.8207012,
+    "pregunta": "Que opinas de los juego de pistolas",
+    "respuesta": "\u00a1Uff, los juegos de pistolas! Me encantan. Depende mucho de lo que busques.\n\nSi te va la acci\u00f3n pura y dura, y quieres sentir la tensi\u00f3n en cada disparo, te recomiendo **Buckshot Roulette** (2.99 EUR). Es una ruleta rusa con un toque diferente, \u00a1y es adictivo!\n\nTambi\u00e9n tienes **GUN\u2122** (14.99 EUR), que es m\u00e1s de mundo abierto, pero con mucha acci\u00f3n con armas.\n\nSi prefieres algo m\u00e1s t\u00e1ctico y con un toque de estrategia, podr\u00edas probar **Showgunners** (28.99 EUR), aunque no es un juego solo de pist"
+  },
+  {
+    "timestamp": "2025-12-08T17:19:51.148550",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1395,
+    "tokens_salida": 203,
+    "tokens_totales": 1598,
+    "elastic_score": 0.78768176,
+    "pregunta": "Que juegos son gratuitos",
+    "respuesta": "\u00a1Claro que s\u00ed! Aqu\u00ed tienes una lista de los juegos gratuitos que tengo disponibles en mi cat\u00e1logo:\n\n*   **UNDECEMBER** (GRATIS) - Un RPG de acci\u00f3n con runas y habilidades para combinar.\n*   **3on3 FreeStyle: Rebound** (GRATIS) - Un juego de baloncesto 3v3 con mucha acci\u00f3n.\n*   **Idle Clans** (GRATIS) - Un MMORPG ocioso con econom\u00eda de jugador y misiones.\n*   **LET IT DIE** (GRATIS) - Un juego de acci\u00f3n y supervivencia con combates fren\u00e9ticos.\n*   **THE FINALS** (GRATIS) - Un shooter de combate p"
+  },
+  {
+    "timestamp": "2025-12-08T17:48:04.304872",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1401,
+    "tokens_salida": 197,
+    "tokens_totales": 1598,
+    "elastic_score": 0.79501325,
+    "pregunta": "Dame juegos de rol",
+    "respuesta": "\u00a1Claro que s\u00ed, amigo! Si te va el rol, tengo un par de joyitas que te van a encantar:\n\n*   **In Stars And Time** (19.5 EUR) - Este juego es una pasada. Te pone en un bucle temporal y tienes que usarlo para cambiar el futuro. La historia es muy profunda y los personajes son geniales.\n*   **Dungeons & Degenerate Gamblers** (14.79 EUR) - Si te va el rol y el juego de cartas, este es tu juego. Te meter\u00e1s en una taberna con personajes muy particulares y tendr\u00e1s que crear tu propia baraja para ganar.\n"
+  },
+  {
+    "timestamp": "2025-12-08T17:49:52.991599",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1354,
+    "tokens_salida": 318,
+    "tokens_totales": 1672,
+    "elastic_score": 0.8069947,
+    "pregunta": "Dame juegos de conducir",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed tienes algunos juegos de conducir que te pueden interesar, todos disponibles en mi lista:\n\n*   **Motor Town: Behind The Wheel** (19.5 EUR) - Si te va el rollo de la conducci\u00f3n realista en mundo abierto, este es tu juego. Puedes hacer de todo, desde repartos hasta carreras. \u00a1Pura diversi\u00f3n al volante!\n*   **The Long Drive** (15.79 EUR) - Un juego de supervivencia en un mundo abierto post-apocal\u00edptico, \u00a1pero conduciendo! Tendr\u00e1s que sobrevivir mientras conduces.\n*   **Keep Driv"
+  },
+  {
+    "timestamp": "2025-12-08T17:50:26.610627",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1392,
+    "tokens_salida": 208,
+    "tokens_totales": 1600,
+    "elastic_score": 0.8046429,
+    "pregunta": "Dame juegos de construir",
+    "respuesta": "\u00a1Claro, amigo! Me encantan los juegos de construir, \u00a1toda una experiencia! Aqu\u00ed te va una lista de los que tengo disponibles:\n\n*   **Emberward** (14.79 EUR) - Es un tower defense roguelite donde construyes laberintos con bloques. \u00a1Estrategia pura!\n*   **Tricky Towers** (4.94 EUR) - \u00a1Un cl\u00e1sico! Apila bloques con f\u00edsica realista. \u00a1Ideal para echar unas risas con amigos!\n*   **Tower Dominion** (11.38 EUR) - Otro tower defense, pero con un toque roguelike. Construyes torres para defenderte de los a"
   }
 ]

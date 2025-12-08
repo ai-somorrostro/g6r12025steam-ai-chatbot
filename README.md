@@ -46,29 +46,6 @@ API-Reto-1/
 ├── requirements.txt
 ├── docker-compose.yml
 └── README.md
-
-/home/g6/reto/
-├── scraper/                            # Pipeline de scraping
-│   ├── setup.sh                        # Orquestador principal
-│   ├── scripts/
-│   │   ├── run_pipeline.py             # Scraping de Steam
-│   │   ├── sacar-datos-games.py        # Detalles de juegos
-│   │   ├── vectorizador.py             # Generación de embeddings
-│   │   ├── desc-changer.py             # Reemplazo de descripciones
-│   │   └── filter-games.py             # Filtrado de juegos
-│   └── data/
-│       ├── steam-top-games.json        # Lista filtrada de juegos
-│       └── steam-games-data-vect.ndjson # Datos vectorizados
-├── imp-futuras/                        # Pipeline de resúmenes IA
-│   ├── flux.sh                         # Orquestador de resúmenes
-│   ├── scripts/
-│   │   ├── extract-desc-nuevas.py      # Extracción de descripciones
-│   │   ├── openrouter-call.py          # Generación de resúmenes IA
-│   │   ├── clean-summary.sh            # Limpieza de formato
-│   │   └── sync-ids.py                 # Sincronización de IDs
-│   └── data/
-│       ├── raw-desc.ndjson             # Descripciones extraídas
-│       └── summary.ndjson              # Resúmenes generados
 ```
 
 ---
@@ -445,9 +422,9 @@ python scripts-ingesta-datos/json-a-elasticsearch.py
 
 ## 🤝 Contribución
 
-Este proyecto forma parte del Reto 1 - Sistema RAG para Steam Games.
+Este proyecto forma parte del Reto 1 - Sistema RAG para Steam Games, basado en recomendación para videojuegos.
 
-**Repositorio**: `g6r12025steam-data-ingestion` (rama: `implementaciones-futuras`)  
+**Repositorio**: `g6r12025steam-ai-chatbot`  
 **Autor**: Equipo G6  
 **Contacto**: iker.ortiz02@somo.eus
 

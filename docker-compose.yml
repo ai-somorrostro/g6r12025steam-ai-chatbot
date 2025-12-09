@@ -1,20 +1,13 @@
-version: "3.9"
-
 services:
-  api-llm:
+  api:
     build: .
-    container_name: steam-llm-api
+    container_name: steam-api
+    env_file:
+      - .env
     ports:
       - "8000:8000"
     volumes:
-      - .:/app
-    environment:
-      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
-      - OPENROUTER_MODEL=${OPENROUTER_MODEL}
-      - EMBEDDING_MODEL=${EMBEDDING_MODEL}
-      - ELASTIC_URL=${ELASTIC_URL}
-      - ELASTIC_INDEX=${ELASTIC_INDEX}
-      - DATASET_PATH=${DATASET_PATH}
-    env_file:
-      - .env
+      - ./logs:/app/logs
+      - ./api_llm:/app/api_llm
     restart: unless-stopped
+    network_mode: host

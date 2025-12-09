@@ -32,7 +32,7 @@ LOCAL_MODEL_ENABLED = os.getenv("LOCAL_MODEL_ENABLED", "false").lower() == "true
 LOCAL_MODEL_URL = os.getenv("LOCAL_MODEL_URL", "http://localhost:5000")
 
 # ============================
-# Prompt con PERSONALIDAD (Mejorado para Opinión vs Venta)
+# Prompt con PERSONALIDAD
 # ============================
 SYSTEM_PROMPT = (
     "Actúa como un experto en videojuegos de Steam, amigable, entusiasta y con criterio propio (como un amigo gamer veterano). "
@@ -158,7 +158,7 @@ class LLMManager:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt_usuario}
             ],
-            "temperature": 0.7, # Un poco de creatividad para que sea amable
+            "temperature": 0.7, 
             "max_tokens": 3000
         }
         try:

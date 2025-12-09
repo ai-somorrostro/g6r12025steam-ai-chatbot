@@ -1,6 +1,6 @@
 import os
 import logging
-import re  # <--- IMPORTANTE: Necesario para detectar números
+import re 
 from typing import Tuple
 from elasticsearch import Elasticsearch
 from dotenv import load_dotenv
@@ -80,13 +80,10 @@ def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 10) -> Tuple[st
             "developers", "price_final", "metacritic_score"
         ]
 
-        # 1. DETECCIÓN DE PRECIO (Regex)
-        # Busca números como: 9.75, 9,75, 10, 4.5
         match_precio = re.search(r'(\d+[.,]\d{1,2}|\d+)', pregunta)
         
         query = {}
 
-        # === ESTRATEGIA A: FILTRO DE PRECIO EXACTO (CORREGIDO) ===
         if match_precio and any(x in pregunta.lower() for x in ['precio', 'cuesta', 'vale', 'euros', 'eur', '$']):
             try:
                 precio_str = match_precio.group(1).replace(',', '.')
@@ -116,43 +113,19 @@ def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 10) -> Tuple[st
             except ValueError:
                 pass
 
-        # === ESTRATEGIA B: BÚSQUEDA VECTORIAL (TEXTO COMENTADO) ===
         if not query:
             query = {
                 "size": top_k, 
                 "_source": source_fields,
                 
-                # Búsqueda Vectorial (Conceptos) - AHORA ES LA ÚNICA ACTIVA
+                # Búsqueda Vectorial (Conceptos) 
                 "knn": {
                     "field": "vector_embedding", 
                     "query_vector": embedding,
                     "k": top_k,
                     "num_candidates": candidates,
-                    # "boost": 0.5 # <--- COMENTADO: Quitamos el boost para tener el score real (0 a 1)
-                },
+                }
 
-                # Búsqueda Texto Exacto (Palabras clave) - COMENTADO (NO SE EJECUTA)
-                # "query": {
-                #     "bool": {
-                #         "should": [
-                #             {
-                #                 "multi_match": {
-                #                     "query": pregunta,
-                #                     "fields": [
-                #                         "name^3",
-                #                         "price_category^5",
-                #                         "genres^2",
-                #                         "categories",
-                #                         "short_description",
-                #                         "detailed_description"
-                #                     ],
-                #                     "type": "best_fields",
-                #                     "fuzziness": "AUTO"
-                #                 }
-                #             }
-                #         ]
-                #     }
-                # }
             }
 
         # Seleccionamos el índice más reciente
@@ -166,7 +139,6 @@ def buscar_contexto_en_elasticsearch(pregunta: str, top_k: int = 10) -> Tuple[st
             return "[INFO] No se encontró contexto relevante.", 0.0
 
         # === CAPTURAR MAX SCORE ===
-        # Al estar comentado el texto y el boost, este score será aprox entre 0.0 y 1.0
         max_score = hits[0].get("_score", 0.0)
 
         contexto_list = []

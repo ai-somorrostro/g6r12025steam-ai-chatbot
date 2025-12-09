@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    container_name: steam-api
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+      - ./api_llm:/app/api_llm
+    restart: unless-stopped
+    network_mode: host

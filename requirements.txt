@@ -19,3 +19,4 @@ elasticsearch
 
 # Testing
 pytest
+sentence-transformers

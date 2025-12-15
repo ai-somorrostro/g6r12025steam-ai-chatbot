@@ -20,3 +20,8 @@ elasticsearch
 # Testing
 pytest
 sentence-transformers
+scikit-learn
+psutil
+matplotlib
+numpy
+seaborn

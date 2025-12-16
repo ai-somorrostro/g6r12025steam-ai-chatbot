@@ -1,209 +1,6 @@
-# # tests/test_benchmark.py
-
-# import time
-# import sys
-# import os
-
-# # Asegura la raíz del proyecto
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-# from api_llm.llm_manager import LLMManager
-# from api_llm.utils.elasticsearch_connector import buscar_contexto_en_elasticsearch
-
-# consultas = [
-#     "juegos cooperativos",
-#     "juegos de estrategia medieval",
-#     "juegos de disparos baratos",
-#     "terror psicológico",
-#     "multijugador local"
-# ]
-
-# def run_benchmark():
-#     llm = LLMManager()
-
-#     for consulta in consultas:
-#         print("\n🧪 Consulta:", consulta)
-
-#         # 🔍 Elasticsearch
-#         inicio = time.time()
-#         contexto, score = buscar_contexto_en_elasticsearch(consulta)
-#         tiempo_busqueda = time.time() - inicio
-
-#         # 🤖 LLM
-#         inicio = time.time()
-#         resultado = llm.obtener_respuesta(consulta, contexto, score)
-#         tiempo_llm = time.time() - inicio
-
-#         print("--------------------------------------------")
-#         print(f"🔍 Elastic score: {score:.4f}")
-#         print(f"📚 Tokens: in={resultado['tokens_entrada']} | out={resultado['tokens_salida']}")
-#         print(f"⏱️ ES: {tiempo_busqueda:.2f}s | LLM: {tiempo_llm:.2f}s")
-#         print("📤 Respuesta:")
-#         print(resultado["respuesta"][:400])
-
-# if __name__ == "__main__":
-#     run_benchmark()
-
-
-
-
-## Codigo funcional con generación de logs de benchmark
-# # tests/test_benchmark.py / Generación de logs implementada para análisis posterior estadísticas y tiempos de respuesta a través de un archivo de logging.
-
-# import time
-# import sys
-# import os
-# import logging
-
-# # Asegura la raíz del proyecto
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-# from api_llm.llm_manager import LLMManager
-# from api_llm.utils.elasticsearch_connector import buscar_contexto_en_elasticsearch
-
-# # 📂 Carpeta y archivo de logs
-# log_dir = os.path.join(os.path.dirname(__file__), "..", "logs")
-# os.makedirs(log_dir, exist_ok=True)
-# log_file = os.path.join(log_dir, "benchmark.log")
-
-# # 📝 Configuración del logger
-# logger = logging.getLogger("benchmark_logger")
-# logger.setLevel(logging.INFO)
-# formatter = logging.Formatter('%(asctime)s - %(message)s')
-
-# file_handler = logging.FileHandler(log_file, mode='w')
-# file_handler.setFormatter(formatter)
-# logger.addHandler(file_handler)
-
-# # Consultas a probar
-# consultas = [
-#     "juegos cooperativos",
-#     "juegos de estrategia medieval",
-#     "juegos de disparos baratos",
-#     "terror psicológico",
-#     "multijugador local"
-# ]
-
-# def run_benchmark():
-#     llm = LLMManager()
-
-#     for consulta in consultas:
-#         print("\n🧪 Consulta:", consulta)
-
-#         # 🔍 Elasticsearch
-#         inicio = time.time()
-#         contexto, score = buscar_contexto_en_elasticsearch(consulta)
-#         tiempo_busqueda = time.time() - inicio
-
-#         # 🤖 LLM
-#         inicio = time.time()
-#         resultado = llm.obtener_respuesta(consulta, contexto, score)
-#         tiempo_llm = time.time() - inicio
-
-#         # Consola
-#         print("--------------------------------------------")
-#         print(f"🔍 Elastic score: {score:.4f}")
-#         print(f"📚 Tokens: in={resultado['tokens_entrada']} | out={resultado['tokens_salida']}")
-#         print(f"⏱️ ES: {tiempo_busqueda:.2f}s | LLM: {tiempo_llm:.2f}s")
-#         print("📤 Respuesta:")
-#         print(resultado["respuesta"][:400])
-
-#         # 📥 Log al archivo
-#         logger.info(f"Consulta: {consulta}")
-#         logger.info(f"Elastic score: {score:.4f}")
-#         logger.info(f"Tokens: in={resultado['tokens_entrada']} | out={resultado['tokens_salida']}")
-#         logger.info(f"Tiempos -> ES: {tiempo_busqueda:.2f}s | LLM: {tiempo_llm:.2f}s")
-#         logger.info(f"Respuesta (recortada): {resultado['respuesta'][:400]}")
-#         logger.info("-" * 60)
-
-# if __name__ == "__main__":
-#     run_benchmark()
-
-
-
-
-
-
-# # ✅ tests/test_benchmark_llm.py /// probar****
-# # Evaluación de LLMs con métricas de rendimiento, tokens y tiempos de ejecución
-
-# import time
-# import sys
-# import os
-# import logging
-
-# # Asegura raíz del proyecto para imports relativos
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-# from api_llm.llm_manager import LLMManager
-# from api_llm.utils.elasticsearch_connector import buscar_contexto_en_elasticsearch
-
-# # 📁 Carpeta y archivo de logs
-# log_dir = os.path.join(os.path.dirname(__file__), "..", "logs")
-# os.makedirs(log_dir, exist_ok=True)
-# log_file = os.path.join(log_dir, "benchmark_llm.log")
-
-# # 📝 Logger configurado
-# logger = logging.getLogger("benchmark_logger_llm")
-# logger.setLevel(logging.INFO)
-# formatter = logging.Formatter('%(asctime)s - %(message)s')
-# file_handler = logging.FileHandler(log_file, mode='w')
-# file_handler.setFormatter(formatter)
-# logger.addHandler(file_handler)
-
-# # 📋 Consultas representativas para prueba de calidad y latencia
-# consultas = [
-#     "juegos cooperativos",
-#     "juegos de estrategia medieval",
-#     "juegos de disparos baratos",
-#     "terror psicológico",
-#     "multijugador local"
-# ]
-
-# def run_benchmark_llm():
-#     llm = LLMManager()
-
-#     for consulta in consultas:
-#         print("\n🧪 Consulta:", consulta)
-
-#         # 🔍 Recuperación semántica
-#         start = time.time()
-#         contexto, score = buscar_contexto_en_elasticsearch(consulta)
-#         tiempo_busqueda = time.time() - start
-
-#         # 🤖 LLM
-#         start = time.time()
-#         resultado = llm.obtener_respuesta(consulta, contexto, score)
-#         tiempo_llm = time.time() - start
-
-#         # Consola
-#         print("--------------------------------------------")
-#         print(f"🔍 Elastic score: {score:.4f}")
-#         print(f"📚 Tokens: entrada={resultado['tokens_entrada']} | salida={resultado['tokens_salida']}")
-#         print(f"⏱️ ES: {tiempo_busqueda:.2f}s | LLM: {tiempo_llm:.2f}s")
-#         print("📤 Respuesta:")
-#         print(resultado["respuesta"])
-
-#         # 📥 Logging detallado
-#         logger.info(f"Consulta: {consulta}")
-#         logger.info(f"Modelo LLM: {resultado['modelo']}")
-#         logger.info(f"Elastic score: {score:.4f}")
-#         logger.info(f"Tokens usados: entrada={resultado['tokens_entrada']} | salida={resultado['tokens_salida']}")
-#         logger.info(f"Tiempo recuperación: {tiempo_busqueda:.2f}s | Tiempo LLM: {tiempo_llm:.2f}s")
-#         logger.info(f"Respuesta completa:\n{resultado['respuesta']}")
-#         logger.info("=" * 70)
-
-# if __name__ == "__main__":
-#     run_benchmark_llm()
-
-
-
-
-
-
-
-# ✅ tests/test_benchmark_llm.py  
+# tests/test_benchmark_llm.py  
 # Evaluación de múltiples LLMs con métricas: latencia, tokens, coste y rendimiento
+
 
 import time
 import sys
@@ -211,18 +8,18 @@ import os
 import logging
 import numpy as np
 
-# 📦 Asegura raíz del proyecto
+# Asegura raíz del proyecto
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from api_llm.llm_manager import LLMManager
 from api_llm.utils.elasticsearch_connector import buscar_contexto_en_elasticsearch
 
-# 📁 Carpeta y archivo de logs
+# Carpeta y archivo de logs
 log_dir = os.path.join(os.path.dirname(__file__), "..", "logs")
 os.makedirs(log_dir, exist_ok=True)
 log_file = os.path.join(log_dir, "benchmark_llm.log")
 
-# 📝 Logger
+# Logger
 logger = logging.getLogger("benchmark_logger_llm")
 logger.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s - %(message)s')
@@ -230,7 +27,7 @@ file_handler = logging.FileHandler(log_file, mode='w')
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 
-# 📋 Consultas representativas
+# Consultas representativas
 consultas = [
     "juegos cooperativos",
     "juegos de estrategia medieval",
@@ -239,7 +36,7 @@ consultas = [
     "multijugador local"
 ]
 
-# 💲 Coste estimado por 1M tokens (en USD)
+# Coste estimado por 1M tokens (en USD)
 costes_por_millon = {
     "openai/gpt-4": 60.0,
     "openai/gpt-3.5-turbo": 1.5,
@@ -249,7 +46,7 @@ costes_por_millon = {
     "claude-3-haiku": 0.25
 }
 
-# 🧠 Modelos a evaluar (usa valores exactos definidos en tu .env OPENROUTER_MODEL)
+# Modelos a evaluar (usa valores exactos definidos en tu .env OPENROUTER_MODEL)
 modelos_a_testear = [
     "google/gemini-2.0-flash-lite-001",
     "mistralai/mixtral-8x7b",

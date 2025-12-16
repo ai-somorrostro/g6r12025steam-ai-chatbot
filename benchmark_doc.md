@@ -208,6 +208,17 @@ Fichero PDF generado en tests/plots/benchmark_embeddings.pdf.
 python tests/graficar_resultados_embeddings.py
 ```
 
+📌 Observaciones importantes
+
+Si al ejecutar algún script falta una librería, instálala con pip install y añade el paquete al requirements.txt.
+
+Todos los logs quedan en logs/, y todas las gráficas se guardan como PDF en tests/plots/.
+
+Se recomienda mantener limpios los logs antes de una nueva ejecución para evitar mezclar resultados.
+
+Con estos pasos, cualquier usuario podrá reproducir de forma controlada y completa el sistema de benchmarking del proyecto y visualizar los resultados sin complicaciones.
+
+
 ### 🚀 Conclusión
 
 El sistema de benchmark ha sido **automatizado, visualizado y documentado** con:

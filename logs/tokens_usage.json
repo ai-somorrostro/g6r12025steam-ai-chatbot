@@ -3494,5 +3494,215 @@
     "elastic_score": 0.8309018,
     "pregunta": "dime juegos de politica",
     "respuesta": "\u00a1Hola! Con gusto te ayudo a encontrar juegos de pol\u00edtica. Aqu\u00ed te presento algunas opciones basadas en tu solicitud y en los juegos disponibles:\n\n*   **Democracy 4**: Por 28.99 EUR, te conviertes en el presidente y tomas decisiones pol\u00edticas para gobernar el pa\u00eds. Es un simulador estrat\u00e9gico muy interesante.\n*   **The Political Process**: A un precio de 12.49 EUR, este simulador pol\u00edtico por turnos te permite crear un personaje, postularte para un cargo, redactar leyes y equilibrar presupuestos."
+  },
+  {
+    "timestamp": "2025-12-16T12:36:23.428516",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1212,
+    "tokens_salida": 411,
+    "tokens_totales": 1623,
+    "elastic_score": 0.80390006,
+    "pregunta": "dime juegos de disparos",
+    "respuesta": "\u00a1Claro que s\u00ed, amigo! \u00bfBuscas acci\u00f3n intensa y adrenalina a tope? \u00a1Tengo justo lo que necesitas!\n\nAqu\u00ed te va una lista de juegos de disparos que tengo disponibles:\n\n*   **GUN\u2122**: Un cl\u00e1sico del lejano oeste. Si te van los duelos a muerte y la acci\u00f3n desenfrenada, este juego te va a encantar. Lo bueno es que est\u00e1 a un precio de 14.99 EUR.\n*   **Buckshot Roulette**: \u00bfTe atreves a jugar a la ruleta rusa con una escopeta? Este juego indie te pondr\u00e1 los pelos de punta. \u00a1Es pura adrenalina! Y lo mejor"
+  },
+  {
+    "timestamp": "2025-12-16T12:38:26.613042",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1212,
+    "tokens_salida": 192,
+    "tokens_totales": 1404,
+    "elastic_score": 0.80390006,
+    "pregunta": "dime juegos de disparos",
+    "respuesta": "\u00a1Hola! \u00a1Claro que s\u00ed! Con gusto te recomiendo algunos juegos de disparos que tengo disponibles:\n\n*   **GUN\u2122**: Un cl\u00e1sico de acci\u00f3n donde la historia te atrapa.\n*   **Buckshot Roulette**: Si te gustan las apuestas y la tensi\u00f3n, este es tu juego.\n*   **STRAFTAT: Maps, Weapons and Hats**: Para los que buscan mapas, armas y sombreros exclusivos.\n*   **DEATHLOOP**: Un shooter en primera persona de nueva generaci\u00f3n con una historia muy interesante.\n*   **Arcane Trigger**: Un roguelike donde cada disp"
+  },
+  {
+    "timestamp": "2025-12-16T14:07:56.701979",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1272,
+    "tokens_salida": 231,
+    "tokens_totales": 1503,
+    "elastic_score": 0.76191545,
+    "pregunta": "Hola, cuantos juegos tienes",
+    "respuesta": "\u00a1Hola! \u00a1Qu\u00e9 bueno verte por aqu\u00ed! \n\nEn este momento, tengo registrados estos juegos disponibles:\n\n*   **Thank Goodness You're Here!** (17.99 EUR)\n*   **Yes, Your Grace** (2.51 EUR)\n*   **Among Us** (4.49 EUR)\n*   **THE GAME OF LIFE 2** (3.74 EUR)\n*   **Keep Talking and Nobody Explodes** (14.79 EUR)\n*   **Exploding Kittens\u00ae 2** (10.99 EUR)\n*   **Animation Throwdown: The Quest for Cards** (GRATIS)\n*   **Nine-Ball Roulette** (3.19 EUR)\n*   **UNO** (9.99 EUR)\n*   **My Wife Threw Out My Card Collecti"
+  },
+  {
+    "timestamp": "2025-12-16T14:08:14.719061",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1272,
+    "tokens_salida": 59,
+    "tokens_totales": 1331,
+    "elastic_score": 0.76191545,
+    "pregunta": "Hola, cuantos juegos tienes",
+    "respuesta": "\u00a1Hola! \u00a1Qu\u00e9 bueno verte por aqu\u00ed! \n\nEn este momento, tengo una selecci\u00f3n de juegos en mi lista. Puedo contarte sobre ellos, darte mi opini\u00f3n o recomendarte alguno si me dices qu\u00e9 tipo de juego te apetece. \u00a1T\u00fa dir\u00e1s!\n"
+  },
+  {
+    "timestamp": "2025-12-16T14:08:25.958367",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1311,
+    "tokens_salida": 70,
+    "tokens_totales": 1381,
+    "elastic_score": 0.7025322,
+    "pregunta": "Hola, de que va el counter",
+    "respuesta": "\u00a1Hola! Entiendo tu entusiasmo por los videojuegos. Sin embargo, en la lista que tengo disponible, no encuentro ning\u00fan juego llamado \"Counter\".\n\n\u00bfHay algo m\u00e1s en lo que pueda ayudarte? Quiz\u00e1s te interesen otros juegos de acci\u00f3n o estrategia que s\u00ed tengo disponibles. \u00a1Dime qu\u00e9 te apetece y te recomiendo algo!\n"
+  },
+  {
+    "timestamp": "2025-12-16T14:08:44.977083",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1291,
+    "tokens_salida": 313,
+    "tokens_totales": 1604,
+    "elastic_score": 0.6991878,
+    "pregunta": "Hola, de que va el counter stricke",
+    "respuesta": "\u00a1Hola! Entiendo tu entusiasmo por Counter-Strike, \u00a1es un juegazo! Aunque no lo tengo en mi lista de juegos disponibles, puedo contarte un poco sobre \u00e9l desde mi experiencia como jugador.\n\nCounter-Strike es un FPS (First Person Shooter) t\u00e1ctico por equipos. B\u00e1sicamente, hay dos bandos: terroristas y antiterroristas, que se enfrentan en mapas donde el objetivo var\u00eda seg\u00fan el modo de juego. Puede ser plantar una bomba, rescatar rehenes o simplemente eliminar al equipo contrario.\n\nLo que lo hace esp"
+  },
+  {
+    "timestamp": "2025-12-16T14:09:53.111157",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1171,
+    "tokens_salida": 155,
+    "tokens_totales": 1326,
+    "elastic_score": 0.8556887,
+    "pregunta": "Hola, de que va el Counter-Strike 2",
+    "respuesta": "\u00a1Hola! \u00a1Qu\u00e9 bueno que te interesa el Counter-Strike 2!\n\nMira, el Counter-Strike 2 es la evoluci\u00f3n del cl\u00e1sico Counter-Strike, un juego de acci\u00f3n t\u00e1ctica en primera persona que ha marcado a generaciones de jugadores. La idea b\u00e1sica es simple: dos equipos, terroristas contra antiterroristas, se enfrentan en mapas donde deben cumplir objetivos como plantar una bomba, rescatar rehenes o simplemente eliminar al equipo contrario.\n\nEn cuanto a lo que ofrece el juego, te puedo decir que es un juego **GR"
+  },
+  {
+    "timestamp": "2025-12-16T14:10:35.319498",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1168,
+    "tokens_salida": 76,
+    "tokens_totales": 1244,
+    "elastic_score": 0.77613723,
+    "pregunta": "tienes el counter strike 2 en tu lista?",
+    "respuesta": "\u00a1Claro que s\u00ed! Tengo el Counter-Strike 2 en mi lista. \u00a1Es un juegazo! Y lo mejor de todo es que es **GRATIS**. Si te va la acci\u00f3n competitiva, es una apuesta segura. Es la nueva entrega de la saga, as\u00ed que si te gustaron los anteriores, este te va a encantar. \n"
+  },
+  {
+    "timestamp": "2025-12-16T14:11:07.789935",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1280,
+    "tokens_salida": 251,
+    "tokens_totales": 1531,
+    "elastic_score": 0.80798805,
+    "pregunta": "dime un juego de politica ",
+    "respuesta": "\u00a1Hola! Con gusto te ayudo a encontrar un buen juego de pol\u00edtica.\n\nEn la lista que tengo, hay varias opciones que podr\u00edan interesarte:\n\n*   **Democracy 4:** Este juego te pone en la piel del presidente de un pa\u00eds, donde debes tomar decisiones pol\u00edticas y tratar de mantener la popularidad para ganar las elecciones.\n*   **The Political Process:** Es un simulador pol\u00edtico por turnos donde puedes crear un personaje, postularte para cargos pol\u00edticos, redactar leyes y equilibrar presupuestos.\n*   **FEM"
+  },
+  {
+    "timestamp": "2025-12-16T14:13:57.364632",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1516,
+    "tokens_salida": 238,
+    "tokens_totales": 1754,
+    "elastic_score": 0.80390006,
+    "pregunta": "dime juegos de disparos",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed te va una lista de juegos de disparos que tengo en mi cat\u00e1logo:\n\n*   **GUN\u2122** (14.99 EUR) - Un cl\u00e1sico de acci\u00f3n.\n*   **Buckshot Roulette** (1.79 EUR) - \u00a1Un juego de ruleta rusa con un arma del calibre 12!\n*   **STRAFTAT: Maps, Weapons and Hats** (5.8 EUR) - \u00a1Con mapas, armas exclusivas, sombreros y humos!\n*   **DEATHLOOP** (59.99 EUR) - Un shooter en primera persona de nueva generaci\u00f3n.\n*   **Arcane Trigger** (8.79 EUR) - Un roguelike donde cada disparo se construye antes de"
+  },
+  {
+    "timestamp": "2025-12-16T14:21:46.850322",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1355,
+    "tokens_salida": 277,
+    "tokens_totales": 1632,
+    "elastic_score": 0.80390006,
+    "pregunta": "dime juegos de disparos",
+    "respuesta": "\u00a1Claro, amigo! Aqu\u00ed te va una lista de juegos de disparos que tengo en mi cat\u00e1logo:\n\n*   **GUN\u2122** (14.99 EUR) - Un cl\u00e1sico del lejano oeste, \u00a1acci\u00f3n pura y dura!\n*   **Buckshot Roulette** (1.79 EUR) - Ruleta rusa con un arma del calibre 12, \u00a1la adrenalina a tope!\n*   **STRAFTAT: Maps, Weapons and Hats** (5.8 EUR) - \u00a1M\u00e1s de 150 mapas, armas exclusivas y sombreros!\n*   **DEATHLOOP** (59.99 EUR) - Un juegazo de acci\u00f3n en primera persona con bucles temporales, \u00a1muy top!\n*   **Arcane Trigger** (8.79 "
+  },
+  {
+    "timestamp": "2025-12-16T14:51:03.390537",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1387,
+    "tokens_salida": 61,
+    "tokens_totales": 1448,
+    "elastic_score": 0.7686304,
+    "pregunta": "Dime que juego me recomiendas",
+    "respuesta": "\u00a1Claro, vamos a ver qu\u00e9 te puede gustar! Para recomendarte algo, necesito saber qu\u00e9 tipo de juegos te van. \u00bfTe van los juegos de estrategia, los de rol, algo casual para pasar el rato...? Dime qu\u00e9 te apetece y te hago una buena recomendaci\u00f3n.\n"
+  },
+  {
+    "timestamp": "2025-12-16T14:51:27.093682",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1407,
+    "tokens_salida": 94,
+    "tokens_totales": 1501,
+    "elastic_score": 0.7591612,
+    "pregunta": "Dime que juego me recomiendas del estilo que tu quieras",
+    "respuesta": "\u00a1Uff, qu\u00e9 buena pregunta! A ver, si me das a elegir, te recomendar\u00eda **\"The RPG\"**, que est\u00e1 a 13.31 EUR.\n\nMe gusta mucho porque es como una mezcla de varios juegos que me encantan. Tiene ese rollo minimalista y a la vez te da libertad para explorar, tomar decisiones que importan y encima con un toque de humor. \u00a1Es una aventura RPG-lite muy divertida!\n"
+  },
+  {
+    "timestamp": "2025-12-16T15:15:53.290342",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1328,
+    "tokens_salida": 36,
+    "tokens_totales": 1364,
+    "elastic_score": 0.7171439,
+    "pregunta": "hola",
+    "respuesta": "\u00a1Hola, gamer! \u00bfEn qu\u00e9 puedo ayudarte hoy? \u00bfBuscas algo en particular o solo quieres charlar sobre juegos? \u00a1Cu\u00e9ntame! \ud83d\udd79\ufe0f \n"
+  },
+  {
+    "timestamp": "2025-12-16T15:16:13.549977",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1304,
+    "tokens_salida": 292,
+    "tokens_totales": 1596,
+    "elastic_score": 0.8309018,
+    "pregunta": "dime juegos de politica",
+    "respuesta": "\u00a1Ey, colega! \u00bfBuscas sumergirte en el mundo de la pol\u00edtica en Steam? \u00a1Aqu\u00ed tienes algunas opciones que te van a encantar!\n\n*   **Democracy 4:** A un precio de 28.99 EUR, te pones en la piel del presidente y tomas decisiones que cambian el pa\u00eds. \u00a1Es como ser el jefe, pero con m\u00e1s papeleo!\n*   **The Political Process:** Por 12.49 EUR, este simulador te permite crear tu personaje y escalar en el mundo pol\u00edtico. \u00a1Perfecto para los que quieren empezar desde abajo!\n*   **FEMBOY FUTA HOUSE - Dirty Elec"
+  },
+  {
+    "timestamp": "2025-12-16T15:17:24.536195",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1328,
+    "tokens_salida": 33,
+    "tokens_totales": 1361,
+    "elastic_score": 0.7171439,
+    "pregunta": "hola",
+    "respuesta": "\u00a1Hola, gamer! \u00bfEn qu\u00e9 puedo ayudarte hoy? \u00bfBuscas algo en especial o solo quieres charlar sobre juegos? \u00a1Cu\u00e9ntame! \ud83d\ude09\n"
+  },
+  {
+    "timestamp": "2025-12-16T15:17:39.394154",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 1272,
+    "tokens_salida": 421,
+    "tokens_totales": 1693,
+    "elastic_score": 0.8196106,
+    "pregunta": "dame juegos de politica",
+    "respuesta": "\u00a1Epa, gamer! \u00a1Claro que s\u00ed! Aqu\u00ed te va una lista de juegos de pol\u00edtica que tengo en mi arsenal, bas\u00e1ndome en lo que s\u00e9:\n\n*   **Democracy 4:** Este es un juegazo donde te pones en la piel del presidente y tienes que tomar decisiones dif\u00edciles. \u00a1Cuesta 28.99 EUR, pero te aseguro que vale cada centavo si te va la estrategia y la pol\u00edtica!\n*   **The Political Process:** Si te va la onda de la pol\u00edtica y la estrategia por turnos, este es tu juego. Por 12.49 EUR te metes de lleno en la pol\u00edtica.\n*   *"
+  },
+  {
+    "timestamp": "2025-12-16T15:18:33.653998",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 397,
+    "tokens_salida": 34,
+    "tokens_totales": 431,
+    "elastic_score": 0.0,
+    "pregunta": "hola",
+    "respuesta": "\u00a1Hola, gamer! \u00bfQu\u00e9 onda? \u00bfEn qu\u00e9 puedo ayudarte hoy? \u00bfBuscas algo en especial para darle ca\u00f1a en Steam? \u00a1Dime!\n"
+  },
+  {
+    "timestamp": "2025-12-16T15:18:51.769164",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 401,
+    "tokens_salida": 305,
+    "tokens_totales": 706,
+    "elastic_score": 0.0,
+    "pregunta": "dime juegos de politica",
+    "respuesta": "\u00a1Ey, \u00bfqu\u00e9 tal, gamer! \ud83c\udfae \u00a1Juegos de pol\u00edtica, dices! \u00a1Me late! Aunque mi base de datos est\u00e1 un poco apagada hoy (\u00a1esa conexi\u00f3n me est\u00e1 jugando una mala pasada!), puedo recomendarte algunos bas\u00e1ndome en lo que s\u00e9 y en lo que suele ser la onda en Steam.\n\nSi te va la onda de la estrategia y el gobierno, y te topas con alguno de estos, \u00a1no dudes en darle una checada!\n\n*   **Democracy 4:** Este es un cl\u00e1sico. Te pones en la piel de un l\u00edder y tienes que tomar decisiones dif\u00edciles para mantener a la ge"
+  },
+  {
+    "timestamp": "2025-12-16T15:19:33.883050",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 398,
+    "tokens_salida": 42,
+    "tokens_totales": 440,
+    "elastic_score": 0.0,
+    "pregunta": "hola",
+    "respuesta": "\u00a1Ey, hola! \u00bfEn qu\u00e9 puedo ayudarte hoy, colega? \u00bfBuscas algo en especial o solo quieres charlar sobre juegos? \u00a1Estoy listo para lo que necesites! \ud83c\udfae\u2728\n"
+  },
+  {
+    "timestamp": "2025-12-16T15:19:49.927605",
+    "modelo": "google/gemini-2.0-flash-lite-001",
+    "tokens_entrada": 404,
+    "tokens_salida": 90,
+    "tokens_totales": 494,
+    "elastic_score": 0.0,
+    "pregunta": "dime juegos de politica",
+    "respuesta": "\u00a1Ey, colega! \ud83c\udfae Parece que te va la pol\u00edtica, \u00a1qu\u00e9 bueno! \ud83c\udfdb\ufe0f\n\nPor desgracia, no tengo datos sobre juegos de pol\u00edtica en este momento. La conexi\u00f3n a la base de datos de Steam est\u00e1 ca\u00edda, \u00a1as\u00ed que no puedo buscar nada! \ud83d\ude2d\n\n\u00a1Pero no te preocupes! En cuanto se solucione, \u00a1me pongo a ello y te doy las mejores recomendaciones! \ud83d\ude09\n"
   }
 ]

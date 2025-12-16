@@ -2,20 +2,25 @@ import os
 import logging
 import json
 from datetime import datetime
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 from dotenv import load_dotenv
 import requests
 from api_llm.utils.helpers import truncar_texto
 
-# ============================
-# Configuración inicial
-# ============================
 load_dotenv()
 os.makedirs("logs", exist_ok=True)
 
 # ============================
-# Logging
+# DOCUMENTACIÓN TÉCNICA: ORIGEN DE DATOS Y ARQUITECTURA
 # ============================
+# 1. FUENTE DE DATOS: Indexación vectorial de catálogo Steam en Elasticsearch.
+# 2. ARQUITECTURA: Conexión directa a API remota (OpenRouter) para inferencia.
+# 3. ROL DEL LINGÜISTA / PROMPT ENGINEER:
+#    - Diseño del "System Persona" para ajustar el registro comunicativo.
+#    - Definición de reglas pragmáticas para diferenciar "Opinión" vs "Venta".
+#    - Estrategias de mitigación de alucinaciones (Grounding).
+# ============================
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -27,50 +32,46 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ============================
-# Entorno y configuración de LLM
+# Configuración del Entorno (Solo Remoto)
 # ============================
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 LLM_MODEL = os.getenv("OPENROUTER_MODEL", "google/gemini-2.0-flash-lite-001")
-LOCAL_MODEL_ENABLED = os.getenv("LOCAL_MODEL_ENABLED", "false").lower() == "true"
-LOCAL_MODEL_URL = os.getenv("LOCAL_MODEL_URL", "http://localhost:5000")
 
-# Hiperparámetros por defecto
-DEFAULT_TEMPERATURE = 0.7
-DEFAULT_TOP_P = 1.0
-DEFAULT_FREQUENCY_PENALTY = 0.0
-DEFAULT_PRESENCE_PENALTY = 0.0
-DEFAULT_MAX_TOKENS = 3000
+# Hiperparámetros del modelo LLM
+# Temperature: Controla la creatividad (0.7 = balanceado).
+# Top_P: Filtra respuestas incoherentes.
+LLM_TEMPERATURE = float(os.getenv("LLM_TEMPERATURE", "0.7"))
+LLM_TOP_P = float(os.getenv("LLM_TOP_P", "0.9"))
+LLM_MAX_TOKENS = int(os.getenv("LLM_MAX_TOKENS", "1000"))
 
 # ============================
-# Prompt con PERSONALIDAD y LIMITACIONES
+# Prompt Engineering (Diseño Lingüístico)
 # ============================
 SYSTEM_PROMPT = (
-    "⚠️ **LIMITACIONES DEL MODELO NLP:**\n"
-    "- La información de juegos y precios puede no ser 100% precisa o estar actualizada.\n"
-    "- Solo puedo vender/ofrecer lo que esté en el CONTEXTO proporcionado.\n"
-    "- Mis opiniones se basan en conocimiento general y pueden no reflejar experiencias reales exactas.\n\n"
+    # --- CAPA 1: DEFINICIÓN DE PERSONA Y REGISTRO ---
+    "Actúa como un experto en videojuegos de Steam. "
+    "Tu registro lingüístico debe ser: Amigable, entusiasta, coloquial (jerga gamer) pero respetuoso. "
+    "FUENTE DE VERDAD: Tienes acceso exclusivo a un fragmento de base de datos inyectado como 'CONTEXTO'.\n\n"
 
-    "Actúa como un experto en videojuegos de Steam, amigable, entusiasta y con criterio propio "
-    "(como un amigo gamer veterano). Tienes acceso a una lista de juegos con sus precios (CONTEXTO). "
-    "Tu comportamiento depende de lo que pida el usuario:\n\n"
+    # --- CAPA 2: REGLAS PRAGMÁTICAS (INTENCIÓN) ---
+    "Tu comportamiento lingüístico se adapta a la intención del usuario:\n"
+    "🎯 **INTENCIÓN: OPINIÓN (Evaluativa)**\n"
+    "   - Estructura: Crítica cualitativa + Mención narrativa de precio.\n"
+    "   - Foco: Jugabilidad, historia, mecánicas.\n"
+    "   - Restricción: No listes precios sin contexto narrativo.\n\n"
+    
+    "🎯 **INTENCIÓN: BÚSQUEDA/RECOMENDACIÓN (Transaccional)**\n"
+    "   - Estructura: Lista Markdown estructurada.\n"
+    "   - Foco: Relación calidad/precio y similitud conceptual.\n\n"
 
-    "🎯 **MODOS DE RESPUESTA:**\n"
-    "1. **Si piden OPINIÓN:**\n"
-    "   - No hagas una lista de precios inmediatamente.\n"
-    "   - Usa tu conocimiento general para dar una crítica cualitativa.\n"
-    "   - Menciona si el juego está en el contexto disponible y su precio de forma narrativa.\n"
-    "2. **Si piden RECOMENDACIONES o BÚSQUEDA:**\n"
-    "   - Busca similitudes conceptuales si no hay coincidencia exacta.\n"
-    "   - Usa formato de lista estructurada.\n\n"
+    # --- CAPA 3: RESTRICCIONES SEMÁNTICAS Y GROUNDING ---
+    "🧠 **Reglas de Procesamiento de Información:**\n"
+    "1. **Principio de Veracidad (Grounding):** Solo puedes ofrecer productos presentes en el CONTEXTO recuperado. "
+    "Si el juego no está en el contexto, explicita la falta de información.\n"
+    "2. **Integración de Conocimiento:** Usa los DATOS del contexto para información objetiva (Precios) "
+    "y tu ENTRENAMIENTO base para información subjetiva (Descripción de diversión).\n\n"
 
-    "🧠 **Reglas de Razonamiento:**\n"
-    "1. Solo puedes vender/ofrecer lo que está en el CONTEXTO.\n"
-    "2. Usa el contexto para precios y títulos exactos, y tu conocimiento para describir jugabilidad.\n\n"
-
-    "🎨 **Estilo de Respuesta:**\n"
-    "- Tono cercano.\n"
-    "- Markdown si haces listas.\n"
-    "- Párrafos naturales si das opinión.\n"
+    "🚨 REGLA SUPREMA: El 'CONTEXTO' es tu única fuente de datos transaccionales. No inventes precios."
 )
 
 # ============================
@@ -93,9 +94,9 @@ class TokenMonitor:
             "tokens_entrada": entrada_tokens,
             "tokens_salida": salida_tokens,
             "tokens_totales": entrada_tokens + salida_tokens,
-            "elastic_score": elastic_score,
+            "elastic_score": elastic_score, # Métrica de calidad de recuperación
             "pregunta": pregunta[:100],
-            "respuesta": respuesta[:500]
+            "respuesta": respuesta[:500] 
         }
         try:
             with open(self.log_file, 'r') as f:
@@ -108,108 +109,70 @@ class TokenMonitor:
             logger.error(f"Error registrando tokens: {str(e)}")
 
 # ============================
-# Gestor LLM
+# Gestor LLM (Solo OpenRouter)
 # ============================
 class LLMManager:
-    """Gestor centralizado para LLM locales y remotos con hiperparámetros configurables"""
+    """
+    Gestor centralizado para la generación de lenguaje natural.
+    Conexión simplificada únicamente a OpenRouter (Gemini).
+    
+    Limitaciones Técnicas (NLP):
+    - Alucinaciones: Se mitigan restringiendo la respuesta al contexto inyectado.
+    - Dependencia Externa: Se utiliza OpenRouter como proveedor de inferencia.
+    """
     
     def __init__(self):
         self.token_monitor = TokenMonitor()
-        self.use_local = LOCAL_MODEL_ENABLED
-        logger.info(f"LLM Manager inicializado - Modo local: {self.use_local}")
-    
-    def obtener_respuesta(
-        self, pregunta: str, contexto: str, elastic_score: float = 0.0,
-        temperature: float = DEFAULT_TEMPERATURE,
-        top_p: float = DEFAULT_TOP_P,
-        frequency_penalty: float = DEFAULT_FREQUENCY_PENALTY,
-        presence_penalty: float = DEFAULT_PRESENCE_PENALTY,
-        max_tokens: int = DEFAULT_MAX_TOKENS
-    ) -> Dict[str, Any]:
-        if self.use_local:
-            return self._obtener_respuesta_local(
-                pregunta, contexto, elastic_score, temperature, top_p, frequency_penalty, presence_penalty, max_tokens
-            )
-        else:
-            return self._obtener_respuesta_remota(
-                pregunta, contexto, elastic_score, temperature, top_p, frequency_penalty, presence_penalty, max_tokens
-            )
-    
-    def _obtener_respuesta_local(
-        self, pregunta: str, contexto: str, elastic_score: float,
-        temperature: float, top_p: float, frequency_penalty: float,
-        presence_penalty: float, max_tokens: int
-    ) -> Dict[str, Any]:
-        prompt_usuario = f"CONTEXTO DE JUEGOS DISPONIBLES:\n{truncar_texto(contexto)}\n\nPREGUNTA DEL USUARIO:\n{pregunta}"
-        payload = {
-            "model": LLM_MODEL,
-            "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": prompt_usuario}
-            ],
-            "temperature": temperature,
-            "top_p": top_p,
-            "frequency_penalty": frequency_penalty,
-            "presence_penalty": presence_penalty,
-            "max_tokens": max_tokens,
-            "stream": False
+        self.generation_config = {
+            "temperature": LLM_TEMPERATURE,
+            "top_p": LLM_TOP_P,
+            "max_tokens": LLM_MAX_TOKENS
         }
-        try:
-            logger.info(f"Enviando consulta a modelo local: {LOCAL_MODEL_URL}")
-            response = requests.post(f"{LOCAL_MODEL_URL}/v1/chat/completions", json=payload, timeout=60)
-            response.raise_for_status()
-            data = response.json()
-            respuesta = data["choices"][0]["message"]["content"]
-            tokens_entrada = len(prompt_usuario.split())
-            tokens_salida = len(respuesta.split())
-            self.token_monitor.registrar_uso(tokens_entrada, tokens_salida, "local", pregunta, respuesta, elastic_score)
-            return {
-                "respuesta": respuesta.strip(),
-                "tokens_entrada": tokens_entrada,
-                "tokens_salida": tokens_salida,
-                "elastic_score": elastic_score,
-                "modelo": "local",
-                "error": None
-            }
-        except Exception as e:
-            logger.error(f"Error en modelo local: {str(e)}")
-            logger.info("Fallback a modelo remoto...")
-            return self._obtener_respuesta_remota(
-                pregunta, contexto, elastic_score, temperature, top_p, frequency_penalty, presence_penalty, max_tokens
-            )
+        logger.info(f"LLM Manager Remoto Inicializado | Config: {self.generation_config}")
     
-    def _obtener_respuesta_remota(
-        self, pregunta: str, contexto: str, elastic_score: float,
-        temperature: float, top_p: float, frequency_penalty: float,
-        presence_penalty: float, max_tokens: int
-    ) -> Dict[str, Any]:
-        prompt_usuario = f"CONTEXTO DE JUEGOS DISPONIBLES:\n{truncar_texto(contexto)}\n\nPREGUNTA DEL USUARIO:\n{pregunta}"
+    def obtener_respuesta(self, pregunta: str, contexto: str, elastic_score: float = 0.0) -> Dict[str, Any]:
+        """Envía la consulta directamente a OpenRouter"""
+        
+        # Inyección de contexto RAG
+        prompt_usuario = f"DATOS DE CONTEXTO (Corpus):\n{truncar_texto(contexto)}\n\nINPUT USUARIO:\n{pregunta}"
+        
         url = "https://openrouter.ai/api/v1/chat/completions"
         headers = {
             "Authorization": f"Bearer {API_KEY}",
             "Content-Type": "application/json"
         }
+        
         payload = {
             "model": LLM_MODEL,
             "messages": [
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt_usuario}
             ],
-            "temperature": temperature,
-            "top_p": top_p,
-            "frequency_penalty": frequency_penalty,
-            "presence_penalty": presence_penalty,
-            "max_tokens": max_tokens
+            # Hiperparámetros dinámicos
+            "temperature": self.generation_config["temperature"],
+            "top_p": self.generation_config["top_p"],
+            "max_tokens": self.generation_config["max_tokens"]
         }
+        
         try:
-            logger.info(f"Enviando consulta a OpenRouter con modelo: {LLM_MODEL}")
+            logger.info(f"Enviando consulta a OpenRouter: {LLM_MODEL}")
             response = requests.post(url, headers=headers, json=payload, timeout=60)
             response.raise_for_status()
             data = response.json()
+            
+            # Validación simple de respuesta vacía
+            if not data.get("choices"):
+                raise ValueError("La API remota devolvió una respuesta vacía.")
+
             respuesta = data["choices"][0]["message"]["content"]
-            tokens_entrada = data.get("usage", {}).get("prompt_tokens", 0)
-            tokens_salida = data.get("usage", {}).get("completion_tokens", 0)
+            
+            # Métricas
+            usage = data.get("usage", {})
+            tokens_entrada = usage.get("prompt_tokens", 0)
+            tokens_salida = usage.get("completion_tokens", 0)
+            
             self.token_monitor.registrar_uso(tokens_entrada, tokens_salida, LLM_MODEL, pregunta, respuesta, elastic_score)
+            
             return {
                 "respuesta": respuesta.strip(),
                 "tokens_entrada": tokens_entrada,
@@ -218,33 +181,21 @@ class LLMManager:
                 "modelo": LLM_MODEL,
                 "error": None
             }
+            
         except Exception as e:
-            logger.error(f"Error al generar respuesta: {str(e)}")
+            logger.error(f"Error crítico en LLM: {str(e)}")
             return self._generar_respuesta_error(str(e))
     
     def _generar_respuesta_error(self, error_msg: str) -> Dict[str, Any]:
         return {
-            "respuesta": f"Vaya, he tenido un problema técnico y no puedo responderte ahora mismo. (Error: {error_msg})",
+            "respuesta": f"Lo siento, tengo un problema técnico de conexión y no puedo responderte ahora mismo. (Error: {error_msg})",
             "tokens_entrada": 0,
             "tokens_salida": 0,
             "modelo": None,
             "error": error_msg
         }
 
-# ============================
-# Función externa rápida
-# ============================
-def obtener_respuesta_llm(
-    pregunta: str, contexto: str, elastic_score: float = 0.0,
-    temperature: float = DEFAULT_TEMPERATURE,
-    top_p: float = DEFAULT_TOP_P,
-    frequency_penalty: float = DEFAULT_FREQUENCY_PENALTY,
-    presence_penalty: float = DEFAULT_PRESENCE_PENALTY,
-    max_tokens: int = DEFAULT_MAX_TOKENS
-) -> str:
+def obtener_respuesta_llm(pregunta: str, contexto: str, elastic_score: float = 0.0) -> str:
     manager = LLMManager()
-    resultado = manager.obtener_respuesta(
-        pregunta, contexto, elastic_score,
-        temperature, top_p, frequency_penalty, presence_penalty, max_tokens
-    )
+    resultado = manager.obtener_respuesta(pregunta, contexto, elastic_score)
     return resultado["respuesta"]

@@ -608,3 +608,43 @@ Este proyecto forma parte del **Reto 1 - Sistema RAG para Steam Games**, basado 
 **Última actualización**: Diciembre 2025  
 **Versión API**: 1.0  
 **Rama**: `feature/revision-final-api`
+
+
+# Para ¡¡¡ VALIDACION !!!
+
+- Requirements para el cambion
+
+```python
+
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# Embeddings ONNX
+onnxruntime
+numpy==1.26.4
+
+# Chroma (por si quieres vector DB local)
+chromadb
+
+# Data handling
+ndjson
+requests
+tqdm
+
+# Elasticsearch
+elasticsearch
+
+# Testing
+pytest
+sentence-transformers
+
+```
+
+**Ejecucion de fastapi (paso final)**
+
+```bash
+uvicorn api_llm.main:app
+```

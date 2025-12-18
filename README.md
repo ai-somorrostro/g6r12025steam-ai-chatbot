@@ -646,6 +646,28 @@ sentence-transformers
 **Modificar el elasticsearch_connector**
 
 ```python
+# Elasticsearch Configuration (Externo - levantado manualmente)
+ELASTIC_URLS=https://localhost:9200  <----- de http --> https
+ELASTIC_INDEX_PREFIX=steam_games-*
+ELASTIC_PASSWORD=C0HcF=wHWtmHAnScY46f  <----- Cambiar
+ELASTIC_USER=elastic   
+
+# OpenRouter LLM Configuration
+OPENROUTER_API_KEY=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
+
+
+# API Configuration
+API_HOST=0.0.0.0
+API_PORT=8000
+
+# Logging
+LOG_LEVEL=INFO
+
+```
+
+**Modificar el elasticsearch_connector**
+
+```python
 import os
 import logging
 import re 

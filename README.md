@@ -653,7 +653,7 @@ ELASTIC_PASSWORD=C0HcF=wHWtmHAnScY46f  <----- Cambiar
 ELASTIC_USER=elastic   
 
 # OpenRouter LLM Configuration
-OPENROUTER_API_KEY=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
+OPENROUTER_API_KEY=sk-or-v1-apikey-aqui
 
 
 # API Configuration

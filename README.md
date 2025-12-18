@@ -643,7 +643,7 @@ sentence-transformers
 
 ```
 
-**Modificar el elasticsearch_connector**
+**Modificar el .env a esto**
 
 ```python
 # Elasticsearch Configuration (Externo - levantado manualmente)
